@@ -20,7 +20,8 @@ export default {
             <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="p-2">{{ index }}</span>
         </div> 
         <div>
-            <ArticleCard v-for="product,index of products[current_tab]" :key="index" :product="product">
+            <ArticleCard v-for="product,index of products[current_tab]" :key="index" 
+                :product="product">
                  
             </ArticleCard>
         </div>
