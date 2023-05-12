@@ -1,14 +1,21 @@
 <script>
-
+import { subSummary }  from '../store/subSummary'
 export default {
-    name: 'SummaryComp'
+    name: 'SummaryComp',
+    data() {
+        return {
+            subSummary
+        }
+    },
 }
 
 </script>
 
 <template>
-    <div>
-        
+    <div class="row">
+        <div class="col-3" v-for="">
+
+        </div>
     </div>
 </template>
 
