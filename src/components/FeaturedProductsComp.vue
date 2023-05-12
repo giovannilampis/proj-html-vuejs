@@ -1,7 +1,12 @@
 <script>
-
+import {products} from '../store/products'
 export default {
-    name: 'FeaturedProductsComp'
+    name: 'FeaturedProductsComp',
+    data() {
+        return {
+            products
+        }
+    }
 }
 
 </script>
