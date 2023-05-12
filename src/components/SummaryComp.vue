@@ -1,4 +1,5 @@
 <script>
+
 import { subSummary }  from '../store/subSummary'
 export default {
     name: 'SummaryComp',
