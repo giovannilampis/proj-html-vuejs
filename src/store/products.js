@@ -11,7 +11,7 @@ export const products = reactive({
         },
         {
             title: 'blanck jacket 2',
-            image: '',
+            image: 'black_elegant_leather_jacket-120x156.jpg',
             description: '',
             price: 1,
             sale_price: null
