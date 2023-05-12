@@ -4,7 +4,7 @@ import TopHeaderComp from '../src/components/TopHeaderComp.vue';
 import BottomHeaderComp from '../src/components/BottomHeaderComp.vue';
 import JumboComp from '../src/components/JumboComp.vue';
 import FeaturedProductsComp from '../src/components/FeaturedProductsComp.vue';
-import CollectionsCompComp from '../src/components/CollectionsComp.vue';
+import CollectionsComp from '../src/components/CollectionsComp.vue';
 import BestSellersComp from '../src/components/BestSellersComp.vue';
 import OffersComp from '../src/components/OffersComp.vue';
 import NewArrivalsComp from '../src/components/NewArrivalsComp.vue';
@@ -22,7 +22,7 @@ export default{
       BottomHeaderComp,
       JumboComp,
       FeaturedProductsComp,
-      CollectionsCompComp,
+      CollectionsComp,
       BestSellersComp,
       OffersComp,
       NewArrivalsComp,
