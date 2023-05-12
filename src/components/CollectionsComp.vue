@@ -4,6 +4,6 @@
 
 <template>
     <div>
-        
+        Collezione
     </div>
 </template>

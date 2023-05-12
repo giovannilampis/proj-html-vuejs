@@ -9,7 +9,8 @@ import BestSellersComp from '../src/components/BestSellersComp.vue';
 import OffersComp from '../src/components/OffersComp.vue';
 import NewArrivalsComp from '../src/components/NewArrivalsComp.vue';
 import QuoteComp from '../src/components/QuoteComp.vue';
-import SummaryComp from '../src/components/BlogArticlesComp.vue';
+import BlogArticlesComp from '../src/components/BlogArticlesComp.vue';
+import SummaryComp from '../src/components/SummaryComp.vue';
 import BrandsComp from '../src/components/BrandsComp.vue';
 import SubscribeComp from '../src/components/SubscribeComp.vue';
 import TopFooterComp from '../src/components/TopFooterComp.vue';
@@ -41,7 +42,7 @@ export default{
 <template>
 
   <header>
-
+ 
     <TopHeaderComp/>
     <BottomHeaderComp/>
 
@@ -51,7 +52,7 @@ export default{
 
     <JumboComp/>
     <FeaturedProductsComp/>
-    <CollectionsCompComp/>
+    <CollectionsComp/>
     <BestSellersComp/>
     <OffersComp/>
     <NewArrivalsComp/>
@@ -66,7 +67,7 @@ export default{
   <footer>
 
     <TopFooterComp/>
-    <BottomFooterComp/>
+    <DownFooterComp/>
 
   </footer>
 
