@@ -1,6 +1,6 @@
 
 import { reactive } from "vue"
-export const collections = reactive([
+export const seasonCollections = reactive([
     {
         img:'winter_collection_bg.jpg',
         title: 'Winter Collection',

@@ -1,7 +1,7 @@
 <script>
 
 import { seasonCollections } from '../store/collections'
-import { CollectionCard } from './CollectionCard.vue'
+import CollectionCard from './CollectionCard.vue'
 
 export default {
     name: 'FeaturedProductsComp',
