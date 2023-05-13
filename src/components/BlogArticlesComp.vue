@@ -19,8 +19,8 @@ export default {
             </div>
             <p>{{ article.title }}</p>
             <span>{{ article.date }}</span>
-            <span>| Comments</span>
-            <!-- <span>{{ article.comments.length }}</span> -->
+            <span> | 0 Comments</span>
+            <!-- <span>{{ article.comments.length >= 1 ? article.comments.length : '0'  }}</span> -->
             <p>{{ article.description }}</p>
         </div>
     </div>

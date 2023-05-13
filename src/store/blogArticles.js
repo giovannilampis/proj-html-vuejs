@@ -1,4 +1,3 @@
-
 import { reactive } from "vue"
 export const blogArticles = reactive([
     {
@@ -22,8 +21,6 @@ export const blogArticles = reactive([
         date: 'September 9th, 2015',
         comment: []
     }
-    
-    
 ])
 
 

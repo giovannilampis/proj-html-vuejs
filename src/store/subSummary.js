@@ -1,7 +1,20 @@
 
 import { reactive } from "vue"
 export const subSummary = reactive({
-   feature: [
+
+   featured: [
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    },
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    },
     {
         img: '',
         title: '',
@@ -9,7 +22,8 @@ export const subSummary = reactive({
         sale_price: 1
     }
    ],
-   "on sale": [
+
+   on_sale: [
     {
         img: '',
         title: '',
@@ -20,12 +34,55 @@ export const subSummary = reactive({
         title: '',
         price: 2,
         sale_price: 1
+    },
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
     }
    ],
-   "top rated": [
+
+   top_rated: [
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    },
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    },
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    }
 
    ],
-   "latest reviews": [
+   latest_reviews: [
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    },
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    },
+    {
+        img: '',
+        title: '',
+        price: 2,
+        sale_price: 1
+    }
 
    ]
 })
