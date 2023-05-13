@@ -1,20 +1,20 @@
 
 import { reactive } from "vue"
-export const seasonCollections = reactive([
+export const collections = reactive([
     {
-        img:'92124892-54cc2e00-edcc-11ea-8994-f15925e53b1e-400x300',
-        title: 'Summer collection',
-        description: ''
+        img:'winter_collection_bg.jpg',
+        title: 'Winter Collection',
+        description: 'stilish and warm'
     },
     {
-        img:'',
-        title: '',
-        description: ''
+        img:'spring_collection_bg.jpg',
+        title: 'Spring Collection',
+        description: 'bright and colorful'
     },
     {
-        img:'',
-        title: '',
-        description: ''
+        img:'autumn_collection_bg.jpg',
+        title: 'Autumn Collection',
+        description: 'rich and comfortable'
     }
 ])
 
