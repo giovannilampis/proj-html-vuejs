@@ -31,11 +31,19 @@ export default {
                 </a>
             </div>
         </div>
-        <div v-for="product,index of topRatedProducts" :key="index">
+        <div class="col-3">
+            <div v-for="top_rated,index of topRatedProducts" :key="index">
+                {{ top_rated }}
+            </div>
         </div>
-        <div v-for="post,index of recentPost" :key="index">
+        <div class="col-3">
+            <div v-for="recent_posts,index of recentPost" :key="index">
+            </div>
         </div>
-        <div v-for="tag,index of tags" :key="index">
+        <div class="col-3 d-flex flex-wrap">
+            <div class="border p-2" style="margin-left: 10px;" v-for="tag,index of tags" :key="index">
+                {{  tag }}
+            </div>
         </div>
     </div>
 </template>

@@ -14,19 +14,73 @@ export default {
 
 <template>
     <div class="row">
-        <div class="col-3" v-for="summary_featured,index of subSummary.featured" :key="index">
-            <div class="d-flex">
-                <div class="flex-1" style="flex: 1">
-                    {{ summary_featured.title }}
-                    Stelline
-                    <span v-if="summary_featured.sale_price != null">
-                        $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
-                    </span>
-                    <span v-else>
-                        ${{ summary_featured.price }}
-                    </span>
+        <div class="col-3">
+            <div v-for="summary_featured,index of subSummary.featured" :key="index">
+                <div class="d-flex">
+                    <div class="flex-1" style="flex: 1">
+                        {{ summary_featured.title }}
+                        Stelline
+                        <span v-if="summary_featured.sale_price != null">
+                            $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
+                        </span>
+                        <span v-else>
+                            ${{ summary_featured.price }}
+                        </span>
+                    </div>
+                    <img style="width: 90px;" :src="'/images/' + summary_featured.img" alt="">
                 </div>
-                <img class="w-5" :src="'/images/' + summary_featured.img" alt="">
+            </div>
+        </div>
+        <div class="col-3">
+            <div v-for="summary_featured,index of subSummary.on_sale" :key="index">
+                <div class="d-flex">
+                    <div class="flex-1" style="flex: 1">
+                        {{ summary_featured.title }}
+                        Stelline
+                        <span v-if="summary_featured.sale_price != null">
+                            $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
+                        </span>
+                        <span v-else>
+                            ${{ summary_featured.price }}
+                        </span>
+                    </div>
+                    <img style="width: 90px;" :src="'/images/' + summary_featured.img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div v-for="summary_featured,index of subSummary.top_rated" :key="index">
+                <div class="d-flex">
+                    <div class="flex-1" style="flex: 1">
+                        {{ summary_featured.title }}
+                        Stelline
+                        <span v-if="summary_featured.sale_price != null">
+                            $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
+                        </span>
+                        <span v-else>
+                            ${{ summary_featured.price }}
+                        </span>
+                    </div>
+                    <img style="width: 90px;" :src="'/images/' + summary_featured.img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <p class=""> Latest Reviews  </p>
+            <div v-for="summary_featured,index of subSummary.latest_reviews" :key="index">
+                <div class="d-flex">
+                    <div class="flex-1" style="flex: 1">
+                        {{ summary_featured.title }}
+                        Stelline
+                        <span v-if="summary_featured.sale_price != null">
+                            $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
+                        </span>
+                        <span v-else>
+                            ${{ summary_featured.price }}
+                        </span>
+                    </div>
+                    <img style="width: 80px;" :src="'/images/' + summary_featured.img" alt="">
+                </div>
             </div>
         </div>
     </div>
