@@ -1,6 +1,6 @@
 <script>
 import { products } from '../store/products'
-import ArticleCard from './FeaturedCard.vue'
+import FeaturedCard from './FeaturedCard.vue'
 export default {
     name: 'FeaturedProductsComp',
     components: {FeaturedCard},
@@ -20,10 +20,10 @@ export default {
             <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="p-2">{{ index }}</span>
         </div> 
         <div>
-            <ArticleCard v-for="product,index of products[current_tab]" :key="index" 
+            <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
                 :product="product">
                  
-            </ArticleCard>
+            </FeaturedCard>
         </div>
     </div>
 </template>

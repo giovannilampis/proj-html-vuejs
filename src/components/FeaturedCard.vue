@@ -15,7 +15,7 @@
 <template>
     <div>
         <div>
-            <img :src="'/images/' + product.image" alt="">
+            <img :src="'/images/' + product.image" alt="{{ product.name }}">
         </div>
         <span v-if="product.sale_price != null">
             $<del>{{ product.price }}</del> ${{ product.sale_price }}
