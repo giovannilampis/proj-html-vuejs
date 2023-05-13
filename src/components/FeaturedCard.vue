@@ -13,10 +13,12 @@
 </script>
 
 <template>
-    <div>
+    <div class="col-3">
         <div>
             <img :src="'/images/' + product.image" alt="{{ product.name }}">
         </div>
+        <p>{{ product.title }}</p>
+        <p>{{ product.description }}</p>
         <span v-if="product.sale_price != null">
             $<del>{{ product.price }}</del> ${{ product.sale_price }}
         </span>

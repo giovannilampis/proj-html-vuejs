@@ -15,11 +15,13 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="text-center">
+        <h2>Featured Products</h2>
+        <p>Must have products from our top sellers</p>
         <div>
-            <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="p-2">{{ index }}</span>
+            <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
         </div> 
-        <div>
+        <div class="container-fluid row">
             <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
                 :product="product">
                  
@@ -30,5 +32,12 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.select-category {
+    width: 6rem;
+    aspect-ratio: 3 / 1;
+    border: 1px solid lightgray;
+    padding: 0.5rem 0.6rem;
+}
 
 </style>
