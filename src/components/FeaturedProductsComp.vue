@@ -15,13 +15,13 @@ export default {
 </script>
 
 <template>
-    <div class="text-center">
-        <h2>Featured Products</h2>
+    <div class="text-center py-5">
+        <h2 class="py-5">Featured Products</h2>
         <p>Must have products from our top sellers</p>
         <div>
             <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
         </div> 
-        <div class="container-fluid row">
+        <div class="container-fluid row py-5">
             <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
                 :product="product">
                  

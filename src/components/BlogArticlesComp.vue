@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid row">
+    <div class="container-fluid row py-5">
         <div v-for="article,index of blogArticles" :key="index" class="col-4">
             <div class="image-container">
                 <img :src="'/images/' + article.img" alt="article.title ">

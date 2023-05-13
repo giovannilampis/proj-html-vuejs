@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-    <div class="row">
+    <div class="row py-5">
         <div class="col-3">
             <p>AVADA</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, exercitationem.</p>

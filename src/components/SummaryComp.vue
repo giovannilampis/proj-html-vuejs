@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <div class="row">
+    <div class="row py-5">
         <div class="col-3">
             <div v-for="summary_featured,index of subSummary.featured" :key="index">
                 <div class="d-flex">

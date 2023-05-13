@@ -16,7 +16,7 @@ export default {
 
 <template>
 
-    <div class="row">
+    <div class="row py-5">
         <CollectionCard v-for="(season, index) in seasonCollections" :key="index" :season="season"/>
     </div>
 

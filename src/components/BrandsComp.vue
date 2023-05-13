@@ -14,7 +14,10 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container py-5">
+        <p class="text-center text-uppercase">
+            brand logos
+        </p>
         <div class="row">
             <div v-for="(logo, index) in brandLogos" :key="index" class="col-2">
                 <img :src="'/images/' + logo" alt="">
