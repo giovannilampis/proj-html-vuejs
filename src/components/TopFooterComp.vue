@@ -32,8 +32,24 @@ export default {
             </div>
         </div>
         <div class="col-3">
-            <div v-for="top_rated,index of topRatedProducts" :key="index">
-                {{ top_rated }}
+            <div class="row" v-for="top_rated,index of topRatedProducts" :key="index">
+                <div class="col-8">
+                    <p class="m-0"> {{ top_rated.name }}</p>
+                    <p class="m-0">
+                        stelline
+                    </p>
+                    <div>
+                        <span v-if="top_rated.sale_price != null">
+                            $<del>{{ top_rated.price }}</del> ${{ top_rated.sale_price }}
+                        </span>
+                        <span v-else>
+                            ${{ top_rated.price }}
+                        </span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img :src="'/images/'+ top_rated.img " alt="">
+                </div>
             </div>
         </div>
         <div class="col-3">
