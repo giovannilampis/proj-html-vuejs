@@ -12,9 +12,11 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <img v-for="img,index of bestSeller" :key="index" 
-            :src="'/images/' +img" alt="">
+    <div class="row " style=" justify-content: center;">
+        <div class="col-2" v-for="img,index of bestSeller" :key="index">
+            <img class="w-100"  :src="'/images/' +img" alt="">
+        </div>
+        
     </div>
 </template>
 
