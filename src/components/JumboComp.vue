@@ -9,9 +9,9 @@ export default {
 <template>
     <div class="jumbo_background">
         <img src="images/home1_slide_three_bg_2.jpg" alt="">
-        <div class="text-center position-absolute">
-            <h1>Brand New Arrivals</h1>
-            <h3 class="text-uppercase">new collection from new york</h3>
+        <div class="text-jumbo">
+            <h1 class="pb-2">Brand New Arrivals</h1>
+            <h3 class="text-uppercase pb-4">new collection from new york</h3>
             <div class="button-container">
                 <button class="text-uppercase">view all</button>
                 <button class="text-uppercase">lookbook</button>
@@ -36,6 +36,15 @@ export default {
 
 .button-container {
     @include display_center;
+}
+
+.text-jumbo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
 }
 
 </style>
