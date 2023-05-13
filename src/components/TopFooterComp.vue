@@ -1,10 +1,10 @@
 <script>
-import { recentPost, tags, topRatedProducts } from '../store/footer'
+import { avada, recentPost, tags, topRatedProducts } from '../store/footer'
 export default {
     name: 'TopFooterComp',
     data() {
         return {
-            recentPost, tags, topRatedProducts 
+            avada, recentPost, tags, topRatedProducts 
         }
     }
 }
@@ -12,11 +12,17 @@ export default {
 </script>
 
 <template>
-    <div class="row py-5">
+    <div class="top-footer row py-5">
         <div class="col-3">
-            <p>AVADA</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, exercitationem.</p>
-            <div>
+            <div class="logo-container">
+                <img :src="'/images/'+ avada.img " alt="">
+            </div>
+            <p>{{ avada.address }}</p>
+            <p>{{ avada.city }}</p>
+            <p>Phone: {{ avada.phone }}</p>
+            <p>Email: {{ avada.email }}</p>
+            <p>Web: {{ avada.web }}</p>
+            <!-- <div>
                 <a href="http://facebook" target="_blank" rel="noopener noreferrer">
 
                 </a>
@@ -29,7 +35,7 @@ export default {
                 <a href="http://youtube" target="_blank" rel="noopener noreferrer">
                     
                 </a>
-            </div>
+            </div> -->
         </div>
         <div class="col-3">
             <div class="row" v-for="top_rated,index of topRatedProducts" :key="index">
@@ -53,7 +59,7 @@ export default {
             </div>
         </div>
         <div class="col-3">
-            <p>RECENT POSTS</p>
+            <p class="text-uppercase">recent posts</p>
             <div v-for="recent_post,index of recentPost" :key="index">
                 <div class="d-flex">
                     <i>></i>
@@ -62,7 +68,8 @@ export default {
             </div>
         </div>
         <div class="col-3 d-flex flex-wrap">
-            <div class="border p-2" style="margin-left: 10px;" v-for="tag,index of tags" :key="index">
+            <p class="text-uppercase">tags</p>
+            <div class="tag-style" style="margin-left: 10px;" v-for="tag,index of tags" :key="index">
                 {{  tag }}
             </div>
         </div>
@@ -72,4 +79,16 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../style/partials/variables' as *;
+
+@use '../style/partials/mixins' as *;
+.top-footer {
+    background-color: $shark;
+    color: $white;
+}
+
+.tag-style {
+    padding: 0.2rem 0.3rem;
+    border: 1px solid $nevada;
+}
 </style>

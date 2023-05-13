@@ -1,6 +1,15 @@
 
 import { reactive, ref } from "vue"
 
+export const avada = reactive({
+    img: 'classic_shop_logo_footer.png',
+    address: '12345 North Main Street',
+    city: 'New York,NY, 5555',
+    phone: '1.800.555.6789',
+    email: 'info@company.com',
+    web: 'theme-fusion.com'
+})
+
 export const topRatedProducts = reactive([
     {
         img: 'leather_gloves-120x156.jpg',
