@@ -1,9 +1,9 @@
 <script>
 import { products } from '../store/products'
-import ArticleCard from './ArticleCard.vue'
+import ArticleCard from './FeaturedCard.vue'
 export default {
     name: 'FeaturedProductsComp',
-    components: {ArticleCard},
+    components: {FeaturedCard},
     data() {
         return {
             products,

@@ -1,46 +1,101 @@
 
 import { reactive } from "vue"
+
 export const products = reactive({
+
     men: [
         {
-            title: 'blanck jacket 1',
-            image: 'black_elegant_leather_jacket-120x156.jpg',
-            description: '',
-            price: 19999,
-            sale_price: 0.4
+            title: 'Black Leather Jacket',
+            image: 'black_elegant_leather_jacket-400x520.jpg',
+            description: 'Men, Jackets, Jeans',
+            price: 235,
+            sale_price: 200
         },
         {
-            title: 'blanck jacket 2',
-            image: 'black_elegant_leather_jacket-120x156.jpg',
-            description: '',
-            price: 1,
+            title: 'Black Leather Suit',
+            image: 'black_leather_suit-400x520.jpg',
+            description: 'Men, Jackets',
+            price: 176,
             sale_price: null
 
+        },
+        {
+            title: 'Black Jacket & Stripe Tee',
+            image: 'blue_jacket_and_white_stripe_tee-400x520.jpg',
+            description: 'Men, Jackets, Suits',
+            price: 580,
+            sale_price: null
+
+        },
+        {
+            title: 'Modern Black Leather Suit',
+            image: 'modern_black_leather_suit-400x520.jpg',
+            description: 'Men, Jackets',
+            price: 1,
+            sale_price: null
         }
     ],
     women: [
         {
-            title: 'lorem ipsup is',
-            image: '',
-            description: '',
-            price: 12,
-            sale_price: null
+            title: 'Black Leather Jacket',
+            image: 'black_leather_jacket-400x520.jpg',
+            description: 'Women, Jackets',
+            price: 210,
+            sale_price: 155
         },
         {
-            title: 'women blanck jacket 2',
-            image: '',
-            description: '',
-            price: 11,
+            title: 'Hipster Black Top',
+            image: 'hipster_black_top-400x520.jpg',
+            description: 'Women, Shirts',
+            price: 80,
+            sale_price: 50
+        },
+        {
+            title: 'Modern Love Tee',
+            image: 'modern_love_tee-400x520.jpg',
+            description: 'Women, Shirts',
+            price: 75,
+            sale_price: 60
+        },
+        {
+            title: 'Printed Dress',
+            image: 'spring_printed_dress-400x520.jpg',
+            description: 'Women, Dresses',
+            price: 90,
             sale_price: null
         }
     ],
     accessories: [
         {
-            title: 'women blanck jacket 2',
-            image: '',
-            description: '',
-            price: 11,
-            sale_price: null
+            title: 'Brown Dress Shoes',
+            image: 'brown_dress_shoes-400x520.jpg',
+            description: 'Men, Accessories, Shoes',
+            price: 170,
+            sale_price: 130
+        },
+        {
+            title: 'Casual Leather Belts',
+            image: 'casual_leather_belts-400x520.jpg',
+            description: 'Men, Accessories, Belts',
+            price: 80,
+            sale_price: 45
+
+        },
+        {
+            title: 'Leather Gloves',
+            image: 'leather_gloves-400x520.jpg',
+            description: 'Men, Accessories, Gloves',
+            price: 70,
+            sale_price: 38
+
+        },
+        {
+            title: 'Modern Leather Boots',
+            image: 'modern_leather_boots-400x520.jpg',
+            description: 'Men, Accessories, Shoes',
+            price: 220,
+            sale_price: 155
+
         }
     ]
 })
