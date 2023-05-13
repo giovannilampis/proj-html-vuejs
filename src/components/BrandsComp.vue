@@ -14,8 +14,12 @@ export default {
 </script>
 
 <template>
-    <div>
-        
+    <div class="container">
+        <div class="row">
+            <div v-for="(logo, index) in brandLogos" :key="index" class="col-2">
+                <img :src="'/images/' + logo" alt="">
+            </div>
+        </div>
     </div>
 </template>
 

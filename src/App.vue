@@ -76,4 +76,5 @@ export default{
 
 <style lang="scss">
 @use './style/main.scss';
+
 </style>
