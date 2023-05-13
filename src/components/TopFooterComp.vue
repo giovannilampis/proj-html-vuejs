@@ -53,7 +53,12 @@ export default {
             </div>
         </div>
         <div class="col-3">
-            <div v-for="recent_posts,index of recentPost" :key="index">
+            <p>RECENT POSTS</p>
+            <div v-for="recent_post,index of recentPost" :key="index">
+                <div class="d-flex">
+                    <i>></i>
+                    <p class="ms-2">{{ recent_post }}</p>
+                </div>
             </div>
         </div>
         <div class="col-3 d-flex flex-wrap">

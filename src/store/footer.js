@@ -1,5 +1,5 @@
 
-import { reactive } from "vue"
+import { reactive, ref } from "vue"
 
 export const topRatedProducts = reactive([
     {
