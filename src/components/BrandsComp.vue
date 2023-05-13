@@ -1,7 +1,14 @@
 <script>
 
+import { brandLogos } from '../store/brandLogos'
+
 export default {
-    name: 'BrandsComp'
+    name: 'BrandsComp',
+    data() {
+        return {
+            brandLogos
+        }
+    },
 }
 
 </script>
