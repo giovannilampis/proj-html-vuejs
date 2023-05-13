@@ -14,19 +14,19 @@ export default {
 
 <template>
     <div class="row">
-        <div class="col-3" v-for="category,index of subSummary" :key="index">
+        <div class="col-3" v-for="summary_featured,index of subSummary.featured" :key="index">
             <div class="d-flex">
                 <div class="flex-1" style="flex: 1">
-                    {{ category.title }}
+                    {{ summary_featured.title }}
                     Stelline
-                    <span v-if="category.sale_price != null">
-                        $<del>{{ category.price }}</del> ${{ product.sale_price }}
+                    <span v-if="summary_featured.sale_price != null">
+                        $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
                     </span>
                     <span v-else>
-                        ${{ category.price }}
+                        ${{ summary_featured.price }}
                     </span>
                 </div>
-                <img class="w-5" :src="'/images/' + category.img" alt="">
+                <img class="w-5" :src="'/images/' + summary_featured.img" alt="">
             </div>
         </div>
     </div>
