@@ -49,6 +49,8 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
+    width: 100%;
+    height: 412px;
     background-image: url(/images/bkgd_confetti-compressor.jpg);
     background-repeat: repeat;
     background-size: cover;

@@ -12,19 +12,22 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid row py-5">
-        <div v-for="article,index of blogArticles" :key="index" class="col-4">
-            <div class="image-container">
-                <img :src="'/images/' + article.img" alt="article.title ">
+    <section>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div v-for="article,index of blogArticles" :key="index" class="col-4">
+                    <div class="image-container">
+                        <img :src="'/images/' + article.img" alt="article.title ">
+                    </div>
+                    <p>{{ article.title }}</p>
+                    <span>{{ article.date }}</span>
+                    
+                    <span> | {{ article.comments }} Comments</span>
+                    <p>{{ article.description }}</p>
+                </div>
             </div>
-            <p>{{ article.title }}</p>
-            <span>{{ article.date }}</span>
-            
-            <span> | {{ article.comments }} Comments</span>
-            <!-- <span>{{ article.comments.length >= 1 ? article.comments.length : '0'  }}</span> -->
-            <p>{{ article.description }}</p>
         </div>
-    </div>
+    </section>
 </template>
 
 
@@ -35,5 +38,10 @@ export default {
 @use '../style/partials/mixins' as *;
     .image-container {
         width: 100%;
+    }
+
+    section {
+        width: 100%;
+        height: 535px;
     }
 </style>

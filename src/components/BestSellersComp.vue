@@ -12,12 +12,13 @@ export default {
 </script>
 
 <template>
-    <div class="row " style=" justify-content: center;">
-        <div class="col-2" v-for="img,index of bestSeller" :key="index">
-            <img class="w-100"  :src="'/images/' +img" alt="">
+    <section>
+        <div class="row pictures">
+            <div class="col-2" v-for="img,index of bestSeller" :key="index">
+                <img :src="'/images/' +img" alt="">
+            </div>
         </div>
-        
-    </div>
+    </section>
 </template>
 
 
@@ -26,5 +27,14 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
+section {
+    height: 535px;
+}
+
+.pictures {
+    justify-content: center;
+    align-items: center;
+}
 
 </style>

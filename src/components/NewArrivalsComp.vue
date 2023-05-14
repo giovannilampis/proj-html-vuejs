@@ -7,9 +7,9 @@ export default {
 </script>
 
 <template>
-    <div>
+    <section>
         
-    </div>
+    </section>
 </template>
 
 
@@ -18,5 +18,10 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
+section {
+    width: 100%;
+    height: 675px;
+}
 
 </style>

@@ -15,7 +15,7 @@ export default {
 
 <template>
     <section>
-        <div class="container py-5">
+        <div class="container">
             <p class="text-center text-uppercase">
                 brand logos
             </p>
@@ -37,6 +37,7 @@ export default {
 
 section {
     background-color: $gray_light;
+    height: 215px;
 }
 
 </style>

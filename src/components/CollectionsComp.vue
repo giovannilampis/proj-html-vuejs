@@ -28,4 +28,9 @@ export default {
 
 @use '../style/partials/mixins' as *;
 
+.row {
+    width: 100%;
+    height: 455px;
+}
+
 </style>
