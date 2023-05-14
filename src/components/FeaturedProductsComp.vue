@@ -38,7 +38,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 .section_featured {
-    padding-top: 10rem;
+    padding-top: 6rem;
     text-align: center;
 }
 
