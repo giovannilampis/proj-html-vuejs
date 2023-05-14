@@ -7,7 +7,15 @@ export default {
     data() {
         return {
             testimonials,
-            current_tab: 'man'
+            current_tab: testimonials[0]
+        }
+    },
+    methods: {
+        changeCharacter() {
+            this.current_tab = this.testimonials[1];
+        },
+        resetCharacter() {
+            this.current_tab = this.testimonials[0];
         }
     }
 }
@@ -16,19 +24,21 @@ export default {
 
 <template>
     <section>
-
-        <img :src="'/images/' + current_tab.img" alt="{{ current_tab.name }}">
-
-        <p>{{ current_tab.quote }}</p>
-
-        <div>
-            <span>{{ current_tab.name }}</span><span>{{ current_tab.position }}</span>
+        <div class="container">
+            <img :src="'/images/' + current_tab.img" alt="{{ current_tab.name }}">
+    
+            <p>{{ current_tab.quote }}</p>
+    
+            <div>
+                <span>{{ current_tab.name }}</span><span>{{ current_tab.position }}</span>
+            </div>
+    
+            <div>
+                <span @click="changeCharacter"><i class="fa-solid fa-circle"></i></span>
+                <span @click="resetCharacter"><i class="fa-solid fa-circle"></i></span>
+            </div>
         </div>
 
-        <div>
-            <span @click="current_tab = man"><i class="fa-solid fa-circle"></i></span>
-            <span @click="current_tab = woman"><i class="fa-solid fa-circle"></i></span>
-        </div>
         
     </section>
 </template>

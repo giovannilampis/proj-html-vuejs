@@ -15,19 +15,21 @@ export default {
 </script>
 
 <template>
-    <div class="section_featured">
-        <h2>Featured Products</h2>
-        <p>Must have products from our top sellers</p>
-        <div>
-            <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
-        </div> 
-        <div class="container-fluid row py-5">
-            <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
-                :product="product">
-                 
-            </FeaturedCard>
+    <section>
+        <div class="container">
+            <h2>Featured Products</h2>
+            <p>Must have products from our top sellers</p>
+            <div>
+                <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
+            </div> 
+            <div class="container-fluid row py-5">
+                <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
+                    :product="product">
+                     
+                </FeaturedCard>
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 
@@ -37,8 +39,8 @@ export default {
 
 @use '../style/partials/mixins' as *;
 
-.section_featured {
-    padding-top: 6rem;
+section {
+    padding-top: 16rem;
     text-align: center;
 }
 
@@ -47,6 +49,11 @@ export default {
     aspect-ratio: 3 / 1;
     border: 1px solid lightgray;
     padding: 0.5rem 0.6rem;
+    background-color: $gray_light;
+    cursor: pointer;
 }
 
+.select-category:hover {
+    background-color: $white;
+}
 </style>

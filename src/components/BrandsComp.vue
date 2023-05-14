@@ -19,8 +19,8 @@ export default {
             <p class="text-center text-uppercase">
                 brand logos
             </p>
-            <div class="row">
-                <div v-for="(logo, index) in brandLogos" :key="index" class="col-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <div v-for="(logo, index) in brandLogos" :key="index" class="logo_container">
                     <img :src="'/images/' + logo" alt="">
                 </div>
             </div>
@@ -38,6 +38,10 @@ export default {
 section {
     background-color: $gray_light;
     height: 215px;
+}
+
+.logo_container {
+    width: 8%;
 }
 
 </style>

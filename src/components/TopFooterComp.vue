@@ -82,6 +82,7 @@ export default {
 section {
     background-color: $shark;
     color: $white;
+    padding: 4rem 0;
 }
 
 .tag-style {

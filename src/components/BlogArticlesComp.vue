@@ -42,6 +42,7 @@ export default {
 
     section {
         width: 100%;
-        height: 535px;
+        height: 440px;
+        margin-top: 6rem;
     }
 </style>

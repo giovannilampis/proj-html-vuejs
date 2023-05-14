@@ -13,9 +13,13 @@ export default {
 
 <template>
     <section>
-        <div class="row pictures">
-            <div class="col-2" v-for="img,index of bestSeller" :key="index">
-                <img :src="'/images/' +img" alt="">
+        <div class="container">
+            <h2>Best Seller</h2>
+            <p>Must have products from our top sellers</p>
+            <div class="row pictures">
+                <div class="col-2" v-for="img,index of bestSeller" :key="index">
+                    <img :src="'/images/' +img" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -29,7 +33,9 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    height: 535px;
+    height: 410px;
+    margin-top: 8rem;
+    text-align: center;
 }
 
 .pictures {

@@ -110,6 +110,7 @@ export default {
 
 section {
     height: 360px;
+    margin-bottom: 10rem;
 }
 
 .summary_element {
