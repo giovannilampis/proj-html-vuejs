@@ -9,20 +9,21 @@ export default {
 <template>
 
   <section>
-    <header class="d-flex justify-content-between align-items-center">
+
+    <header class="container d-flex justify-content-between align-items-center">
   
-        <div>
+        <div class="logo_container">
             <img src="/images/classic_shop_logo2x.png" alt="logo">
         </div>
   
         <ul class="text-uppercase m-0 d-flex justify-content-between align-items-center">
   
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Categories</a></li>
+            <li><a href="#">Home</a><i class="fa-solid fa-chevron-down"></i></li>
+            <li><a href="#">Shop</a><i class="fa-solid fa-chevron-down"></i></li>
+            <li><a href="#">Products</a><i class="fa-solid fa-chevron-down"></i></li>
+            <li><a href="#">Categories</a><i class="fa-solid fa-chevron-down"></i></li>
             <li><a href="#">News</a></li>
-            <li><a href="#">Elements</a></li>
+            <li><a href="#">Elements</a><i class="fa-solid fa-chevron-down"></i></li>
   
         </ul>
   
@@ -31,6 +32,7 @@ export default {
         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
   
     </header>
+
   </section>
 
 
@@ -51,30 +53,30 @@ section {
 }
 
 header {
-    height: 6rem;
-    width: 85%;
+    height: 100%;
     margin: 0 auto;
   }
 
-  img {
-    width: 100%;
+  .logo_container {
+    aspect-ratio: 4 / 1;
+    height: 40px;
   }
 
-  a {
-    text-decoration: none;
+  li {
     margin-right: 3rem;
-    color: black;
   }
 
-  ul li:hover a{
-    color: rgba(2, 130, 249, 1);
-    border-bottom: 2px solid rgba(2, 130, 249, 1);
+  .fa-chevron-down {
+    padding-left: 0.8rem;
   }
 
-  header ul li {
-    color: black;
-    list-style-type: none;
-   
+  button {
+    background-color: $havelock_blue;
+    color: $white;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
   }
 
 </style>
