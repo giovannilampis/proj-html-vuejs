@@ -4,11 +4,6 @@
     props: {
         product: Object
     },
-    data() {
-        return {
-           
-        }
-    }
 }
 </script>
 

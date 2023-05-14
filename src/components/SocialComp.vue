@@ -1,10 +1,9 @@
 <script>
 
+// import {social_icons} from '../store/social'
+
 export default {
     name: 'SocialComp',
-    props: {
-        icon: String
-    },
     data() {
         return {
             // social_icons
@@ -15,8 +14,11 @@ export default {
 </script>
 
 <template>
-    <div>
-        <a href="#">{{ icon }}</a>
+    <div class="icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
     </div>
 </template>
 
@@ -25,6 +27,11 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
+.icons {
+    @include display_center;
+    color: $white;
+}
 
 
 </style>

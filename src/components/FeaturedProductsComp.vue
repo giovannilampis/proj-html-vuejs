@@ -15,8 +15,8 @@ export default {
 </script>
 
 <template>
-    <div class="text-center py-5">
-        <h2 class="py-5">Featured Products</h2>
+    <div class="section_featured">
+        <h2>Featured Products</h2>
         <p>Must have products from our top sellers</p>
         <div>
             <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
@@ -32,6 +32,11 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.section_featured {
+    padding-top: 10rem;
+    text-align: center;
+}
 
 .select-category {
     width: 6rem;

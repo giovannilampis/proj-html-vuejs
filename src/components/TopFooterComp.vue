@@ -1,6 +1,5 @@
 <script>
 import { avada, recentPost, tags, topRatedProducts } from '../store/footer'
-import { social_icons } from '../store/social'
 import SocialComp from './SocialComp.vue'
 import StarsComp from './StarsComp.vue'
 export default {
@@ -9,7 +8,7 @@ export default {
     components: {StarsComp},
     data() {
         return {
-            avada, recentPost, tags, topRatedProducts, social_icons
+            avada, recentPost, tags, topRatedProducts
         }
     }
 }
@@ -28,8 +27,7 @@ export default {
             <p>Email: {{ avada.email }}</p>
             <p>Web: {{ avada.web }}</p>
             
-            <SocialComp v-for="(icon, index) in social_icons" :key="index" 
-            :icon="icon"/>
+            <SocialComp/>
 
         </div>
         <div class="col-3">
