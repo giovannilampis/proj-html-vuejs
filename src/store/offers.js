@@ -8,9 +8,9 @@ export const offers = reactive([
 
     },
     {
-        img: 'promo_box_1_bg.jpg',
-        offer: '70% Off',
-        description: 'Hammer bro jelectro buzzy beetle side-scrolling paragoomba,'
+        img: 'promo_box_2_bg.jpg',
+        offer: 'Free Shipping',
+        description: 'Hammer bro jelectro buzzy beetle side-scrolling paragoomba'
     }
     
 ])
