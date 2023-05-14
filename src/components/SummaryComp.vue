@@ -105,7 +105,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 .summary_element {
-    border-bottom: 1px solid $edward;
+    border-bottom: 1px solid $gray_light;
 }
 
 </style>
