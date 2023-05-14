@@ -1,15 +1,32 @@
 <script>
 
+import { offers } from '../store/offers'
+
 export default {
-    name: 'OffersComp'
+    name: 'OffersComp',
+    data() {
+        return {
+            offers
+        }
+    },
 }
 
 </script>
 
 <template>
-    <div>
+
+    <section>
+
+        <div class="promo_container">
+
+            <div>
+
+            </div>
+
+        </div>
         
-    </div>
+    </section>
+
 </template>
 
 
@@ -18,5 +35,16 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
+section {
+    background-image: url(/images/bkgd_confetti-compressor.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    min-height: 20rem;
+}
+
+.promo_container {
+    @include display_center;
+}
 
 </style>
