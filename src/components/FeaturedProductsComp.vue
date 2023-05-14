@@ -1,9 +1,12 @@
 <script>
 import { products } from '../store/products'
 import FeaturedCard from './FeaturedCard.vue'
+import SectionTitle from './SectionTitle.vue'
+
 export default {
     name: 'FeaturedProductsComp',
     components: {FeaturedCard},
+    components: {SectionTitle},
     data() {
         return {
             products,
@@ -16,6 +19,7 @@ export default {
 
 <template>
     <section>
+        <SectionTitle/>
         <div class="container">
             <h2>Featured Products</h2>
             <p>Must have products from our top sellers</p>
