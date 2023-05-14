@@ -33,7 +33,7 @@ export default {
 
 section {
     width: 100%;
-    height: 675px;
+    height: 500px;
     text-align: center;
     margin-top: 2rem;
 }
