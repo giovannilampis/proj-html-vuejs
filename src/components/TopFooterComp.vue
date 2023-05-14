@@ -80,7 +80,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    background-color: $shark;
+    background-color: $top_footer;
     color: $white;
     padding: 4rem 0;
 }
