@@ -1,10 +1,13 @@
 <script>
 import { avada, recentPost, tags, topRatedProducts } from '../store/footer'
+import { social_icons } from '../store/social'
+import SocialComp from './SocialComp.vue'
 export default {
     name: 'TopFooterComp',
+    components: {SocialComp},
     data() {
         return {
-            avada, recentPost, tags, topRatedProducts 
+            avada, recentPost, tags, topRatedProducts, social_icons
         }
     }
 }
@@ -22,20 +25,9 @@ export default {
             <p>Phone: {{ avada.phone }}</p>
             <p>Email: {{ avada.email }}</p>
             <p>Web: {{ avada.web }}</p>
-            <!-- <div>
-                <a href="http://facebook" target="_blank" rel="noopener noreferrer">
+            
+            <SocialComp v-for="(icon, index) in social_icons" :key="index" :icon="icon"/>
 
-                </a>
-                <a href="http://twitter" target="_blank" rel="noopener noreferrer">
-                    
-                </a>
-                <a href="http://instagram" target="_blank" rel="noopener noreferrer">
-                    
-                </a>
-                <a href="http://youtube" target="_blank" rel="noopener noreferrer">
-                    
-                </a>
-            </div> -->
         </div>
         <div class="col-3">
             <div class="row" v-for="top_rated,index of topRatedProducts" :key="index">

@@ -1,11 +1,13 @@
 <script>
 
-import { social_icons } from '../store/social'
 export default {
     name: 'SocialComp',
+    props: {
+        icon: Object
+    },
     data() {
         return {
-            social_icons
+            // social_icons
         }
     },
 }
@@ -14,14 +16,15 @@ export default {
 
 <template>
     <div>
-        <a v-for="(icon, index) in social_icons" :key="index" href="#">{{ icon }}</a>
+        <a href="#">{{ icon }}</a>
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
 
 </style>
