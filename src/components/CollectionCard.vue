@@ -18,13 +18,42 @@
             <img style="object-fit: cover; position: absolute; z-index: -1; top: 0; left: 0; height: 100%; width: 100%;" 
                 :src="'/images/' + season.img" alt="{{ season.title }}">
 
-            <p>
-                {{ season.title }} 
-            </p>
+            <div class="collection_text">
+
+                <p class="fs-2 fw-bold">{{ season.title }}</p>
+    
+                <p class="text-uppercase fw-light">{{ season.description }}</p>
+    
+                <a class="text-uppercase button_collection" href="#">view more</a>
+
+            </div>
+
     </div>
 
 </template>
 
 <style lang="scss" scoped>
+
+@use '../style/partials/variables' as *;
+
+@use '../style/partials/mixins' as *;
+.collection_text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
+}
+
+.button_collection {
+    text-decoration: none;
+    color: $white;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid $white;
+    border-radius: 10%;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
 
 </style>
