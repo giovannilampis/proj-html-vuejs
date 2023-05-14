@@ -29,6 +29,10 @@ export default {
 
 
 <style lang="scss" scoped>
+
+@use '../style/partials/variables' as *;
+
+@use '../style/partials/mixins' as *;
     .image-container {
         width: 100%;
     }

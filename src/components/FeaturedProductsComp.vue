@@ -33,6 +33,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../style/partials/variables' as *;
+
+@use '../style/partials/mixins' as *;
+
 .section_featured {
     padding-top: 10rem;
     text-align: center;
