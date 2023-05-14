@@ -20,11 +20,11 @@
 
             <div class="collection_text">
 
-                <p class="fs-2 fw-bold">{{ season.title }}</p>
+                <p class="fs-3 fw-bold">{{ season.title }}</p>
     
                 <p class="text-uppercase fw-light">{{ season.description }}</p>
     
-                <a class="text-uppercase button_collection" href="#">view more</a>
+                <a class="button_collection" href="#">view more</a>
 
             </div>
 
@@ -39,7 +39,7 @@
 @use '../style/partials/mixins' as *;
 .collection_text {
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $white;
@@ -47,12 +47,13 @@
 }
 
 .button_collection {
+    text-transform: uppercase;
     text-decoration: none;
     color: $white;
-    padding: 0.6rem 0.8rem;
+    padding: 0.7rem 0.9rem;
     border: 1px solid $white;
-    border-radius: 10%;
-    font-size: 0.7rem;
+    border-radius: 10px;
+    font-size: 0.65rem;
     font-weight: bold;
 }
 

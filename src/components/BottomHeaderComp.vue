@@ -27,7 +27,7 @@ export default {
   
         </ul>
   
-        <button class="text-uppercase">shop now!</button>
+        <button>shop now!</button>
   
         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
   
@@ -77,6 +77,7 @@ header {
     font-size: 0.9rem;
     padding: 0.6rem 0.8rem;
     border-radius: 12px;
+    text-transform: uppercase;
   }
 
 </style>

@@ -13,8 +13,8 @@ export default {
             <h1 class="pb-2">Brand New Arrivals</h1>
             <h3 class="text-uppercase pb-4">new collection from new york</h3>
             <div class="button-container">
-                <button class="text-uppercase">view all</button>
-                <button class="text-uppercase">lookbook</button>
+                <button class="mx-2">view all</button>
+                <button class="mx-2">lookbook</button>
             </div>
         </div>
     </div>
@@ -27,6 +27,16 @@ export default {
 
 @use '../style/partials/mixins' as *;
 
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
 .jumbo_background {
     width: 100%;
     height: 482px;
@@ -36,6 +46,15 @@ export default {
 
 .button-container {
     @include display_center;
+}
+
+button {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    padding: 0.8rem 1.2rem;
+    text-transform: uppercase;
+    border-radius: 12px;
 }
 
 .text-jumbo {
