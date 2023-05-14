@@ -23,7 +23,7 @@ export default {
             <ul class="d-flex justify-content-between align-items-center">
                 <li class="border_right"><a href=""></a>Shopping Cart</li>
                 <li class="border_right">My Account</li>
-                <li class="shopping_cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i> CART <i class="fa-solid fa-chevron-down"></i></li>
+                <li class="shopping_cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i><span class="text-uppercase px-2">cart</span><i class="fa-solid fa-chevron-down"></i></li>
             </ul>
     
         </div>
@@ -46,7 +46,9 @@ section {
     background-color: $white;
 }
 
-
+.container ul:first-child li {
+    margin-right: 1rem;
+}
 
 ul {
     height: 40px;
