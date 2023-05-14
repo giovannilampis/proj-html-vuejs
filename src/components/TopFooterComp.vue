@@ -28,6 +28,14 @@ export default {
                     <p>Phone: {{ avada.phone }}</p>
                     <p>Email: {{ avada.email }}</p>
                     <p>Web: {{ avada.web }}</p>
+
+
+                    <ul class="d-flex justify-content-start align-items-center">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>  
+                    </ul>
                     
                     <SocialComp/>
         
@@ -83,6 +91,18 @@ section {
     background-color: $top_footer;
     color: $white;
     padding: 4rem 0;
+}
+
+.logo-container {
+    width: 40%;
+    aspect-ratio: 4 / 1;
+    padding-bottom: 3rem;
+}
+
+.fa-brands {
+    color: $white;
+    margin-right: 1.5rem;
+    margin-top: 2rem;
 }
 
 .tag-style {
