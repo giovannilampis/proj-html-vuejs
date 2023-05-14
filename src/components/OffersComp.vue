@@ -19,17 +19,21 @@ export default {
 
         <div class="promo_container">
 
-            <div class="promo_box" v-for="(offer, index) in offers" :key="index">
+            <div v-for="(offer, index) in offers" :key="index">
 
-                <img :src="'/images/' + offer.img" alt="">
+                <div class="promo_box">
 
-                <div class="promo_text">
-
-                    <p class="fs-3 fw-bold">{{ offer.offer }}</p>
-
-                    <p class="fw-light">{{ offer.description }}</p>
-
-                    <button class="offer_button">view more</button>
+                    <img :src="'/images/' + offer.img" alt="">
+    
+                    <div class="promo_text">
+    
+                        <p class="fs-3 fw-bold">{{ offer.offer }}</p>
+    
+                        <p class="fw-light">{{ offer.description }}</p>
+    
+                        <button class="offer_button">view more</button>
+    
+                    </div>
 
                 </div>
 
@@ -63,8 +67,8 @@ section {
 }
 
 .promo_box {
-    width: 25%;
-    aspect-ratio: 3 /2;
+    width: 50%;
+    aspect-ratio: 3 / 2;
     position: relative;
 }
 

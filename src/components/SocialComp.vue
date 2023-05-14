@@ -1,12 +1,10 @@
 <script>
 
-// import {social_icons} from '../store/social'
-
 export default {
     name: 'SocialComp',
     data() {
         return {
-            // social_icons
+            
         }
     },
 }
@@ -14,12 +12,12 @@ export default {
 </script>
 
 <template>
-    <div class="icons">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    </div>
+    <ul>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>  
+    </ul>
 </template>
 
 <style lang="scss" scoped>
@@ -27,11 +25,6 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
-
-.icons {
-    @include display_center;
-    color: $white;
-}
 
 
 </style>
