@@ -2,9 +2,11 @@
 import { avada, recentPost, tags, topRatedProducts } from '../store/footer'
 import { social_icons } from '../store/social'
 import SocialComp from './SocialComp.vue'
+import StarsComp from './StarsComp.vue'
 export default {
     name: 'TopFooterComp',
     components: {SocialComp},
+    components: {StarsComp},
     data() {
         return {
             avada, recentPost, tags, topRatedProducts, social_icons
@@ -26,16 +28,16 @@ export default {
             <p>Email: {{ avada.email }}</p>
             <p>Web: {{ avada.web }}</p>
             
-            <SocialComp v-for="(icon, index) in social_icons" :key="index" :icon="icon"/>
+            <SocialComp v-for="(icon, index) in social_icons" :key="index" 
+            :icon="icon"/>
 
         </div>
         <div class="col-3">
+            <p class="text-uppercase">top rated products</p>
             <div class="row" v-for="top_rated,index of topRatedProducts" :key="index">
                 <div class="col-8">
                     <p class="m-0"> {{ top_rated.name }}</p>
-                    <p class="m-0">
-                        stelline
-                    </p>
+                    <StarsComp/>
                     <div>
                         <span v-if="top_rated.sale_price != null">
                             $<del>{{ top_rated.price }}</del> ${{ top_rated.sale_price }}
