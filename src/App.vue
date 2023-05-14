@@ -8,7 +8,7 @@ import CollectionsComp from '../src/components/CollectionsComp.vue';
 import BestSellersComp from '../src/components/BestSellersComp.vue';
 import OffersComp from '../src/components/OffersComp.vue';
 import NewArrivalsComp from '../src/components/NewArrivalsComp.vue';
-import QuoteComp from '../src/components/QuoteComp.vue';
+import TestimonialsComp from '../src/components/TestimonialsComp.vue';
 import BlogArticlesComp from '../src/components/BlogArticlesComp.vue';
 import SummaryComp from '../src/components/SummaryComp.vue';
 import BrandsComp from '../src/components/BrandsComp.vue';
@@ -27,7 +27,7 @@ export default{
       BestSellersComp,
       OffersComp,
       NewArrivalsComp,
-      QuoteComp,
+      TestimonialsComp,
       BlogArticlesComp,
       SummaryComp,
       BrandsComp,
@@ -56,7 +56,7 @@ export default{
     <BestSellersComp/>
     <OffersComp/>
     <NewArrivalsComp/>
-    <QuoteComp/>
+    <TestimonialsComp/>
     <BlogArticlesComp/>
     <SummaryComp/>
     <BrandsComp/>

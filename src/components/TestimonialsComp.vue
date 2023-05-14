@@ -1,8 +1,16 @@
 <script>
 
+import { testimonials } from '../store/testimonials'
+
 export default {
-    name: 'QuoteComp'
+    name: 'TestimonialsComp',
+    data() {
+        return {
+            testimonials
+        }
+    }
 }
+
 
 </script>
 
@@ -12,11 +20,11 @@ export default {
     </div>
 </template>
 
-
 <style lang="scss" scoped>
 
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
 
 </style>
