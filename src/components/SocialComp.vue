@@ -3,7 +3,7 @@
 export default {
     name: 'SocialComp',
     props: {
-        icon: Object
+        icon: String
     },
     data() {
         return {
