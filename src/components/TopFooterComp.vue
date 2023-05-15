@@ -1,10 +1,8 @@
 <script>
 import { avada, recentPost, tags, topRatedProducts } from '../store/footer'
-import SocialComp from './SocialComp.vue'
 import StarsComp from './StarsComp.vue'
 export default {
     name: 'TopFooterComp',
-    components: {SocialComp},
     components: {StarsComp},
     data() {
         return {
@@ -19,6 +17,8 @@ export default {
     <section>
         <div class="container">
             <div class="row">
+
+                <!-- AVADA CLASSIC SHOP -->
                 <div class="col-3">
                     <div class="logo-container">
                         <img :src="'/images/'+ avada.img " alt="">
@@ -37,9 +37,9 @@ export default {
                         <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>  
                     </ul>
                     
-                    <SocialComp/>
-        
                 </div>
+
+                <!-- TOP RATED PRODUCTS -->
                 <div class="col-3">
                     <p class="text-uppercase">top rated products</p>
                     <div class="row" v-for="top_rated,index of topRatedProducts" :key="index">
@@ -56,10 +56,14 @@ export default {
                             </div>
                         </div>
                         <div class="col-4">
-                            <img :src="'/images/'+ top_rated.img " alt="">
+                            <div class="image_container">
+                                <img :src="'/images/'+ top_rated.img " alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- RECENT POSTS -->
                 <div class="col-3">
                     <p class="text-uppercase">recent posts</p>
                     <div v-for="recent_post,index of recentPost" :key="index">
@@ -69,11 +73,13 @@ export default {
                         </div>
                     </div>
                 </div>
+
+                <!-- TAGS -->
                 <div class="col-3 d-flex flex-wrap">
-                    <p class="text-uppercase">tags</p>
-                    <div class="tag-style" style="margin-left: 10px;" v-for="tag,index of tags" :key="index">
+                    <p class="text-uppercase w-p">tags</p>
+                    <span class="tag-style" v-for="tag,index of tags" :key="index">
                         {{  tag }}
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>
@@ -98,6 +104,10 @@ section {
     aspect-ratio: 4 / 1;
     padding-bottom: 3rem;
 }
+.image_container {
+    width: 70px;
+    padding-bottom: 1rem;
+}
 
 .fa-brands {
     color: $white;
@@ -105,8 +115,15 @@ section {
     margin-top: 2rem;
 }
 
+.w-p {
+    width: 100%;
+    height: 0.01rem;
+}
+
 .tag-style {
-    padding: 0.2rem 0.3rem;
-    border: 1px solid $nevada;
+    border: 0.3px solid $nevada;
+    height: 1.7rem;
+    margin-right: 0.3rem;
+    padding: 0 0.3rem;
 }
 </style>

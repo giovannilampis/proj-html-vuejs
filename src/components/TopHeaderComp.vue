@@ -1,10 +1,7 @@
 <script>
 
-import SocialComp from './SocialComp.vue'
-
 export default {
-    name: 'TopHeaderComp',
-    components: {SocialComp}
+    name: 'TopHeaderComp'
 }
 
 </script>
