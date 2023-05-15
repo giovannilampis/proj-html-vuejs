@@ -57,7 +57,7 @@ export default {
                         </div>
                         <div class="col-4">
                             <div class="image_container">
-                                <img :src="'/images/'+ top_rated.img " alt="">
+                                <img :src="'/images/'+ top_rated.img " :alt="top_rated.name">
                             </div>
                         </div>
                     </div>
