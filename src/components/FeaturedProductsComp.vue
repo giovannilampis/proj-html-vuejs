@@ -1,12 +1,12 @@
 <script>
 import { products } from '../store/products'
 import FeaturedCard from './FeaturedCard.vue'
-import SectionTitle from './SectionTitle.vue'
+// import SectionTitle from './SectionTitle.vue'
 
 export default {
     name: 'FeaturedProductsComp',
     components: {FeaturedCard},
-    components: {SectionTitle},
+    // components: {SectionTitle},
     data() {
         return {
             products,
