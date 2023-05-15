@@ -6,9 +6,35 @@ export default {
     name: 'BrandsComp',
     data() {
         return {
-            brandLogos
+            brandLogos,
+            start: 0,
+            end: 5
         }
     },
+    methods: {
+        nextButton(){
+            // i successi 5 elementi 
+            // incrementando indice di partenza e indice di fine
+            if( this.end == this.bestSeller.length ){
+                this.start = 0;
+                this.end =  5;
+            } else {
+                this.start ++;
+                this.end ++;
+            }
+        },
+        prevButton(){
+            // i successi 5 elementi 
+            // incrementando indice di partenza e indice di fine
+            if ( this.start == 0 ) {
+                this.start = this.bestSeller.length - 5;
+                this.end = this.bestSeller.length;
+            } else {
+                this.start --;
+                this.end --;
+            }
+        }
+    }
 }
 
 </script>
@@ -20,7 +46,7 @@ export default {
                 brand logos
             </p>
             <div class="flex">
-                <div v-for="(logo, index) in brandLogos" :key="index" class="logo_container">
+                <div v-for="(logo, index) in brandLogos.slice(start,end)" :key="index" class="logo_container">
                     <img :src="'/images/' + logo" alt="">
                 </div>
             </div>
