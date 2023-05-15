@@ -27,10 +27,13 @@ export default {
                 <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
             </div> 
             <div class="container-fluid row py-4">
-                <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
-                    :product="product">
-                     
-                </FeaturedCard>
+                
+                <div class="row">
+                    <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
+                        :product="product">
+                         
+                    </FeaturedCard>
+                </div>
             </div>
         </div>
     </section>

@@ -60,14 +60,16 @@ header {
   .logo_container {
     aspect-ratio: 4 / 1;
     height: 40px;
+    padding-right: 2rem;
   }
 
   li {
-    margin-right: 3rem;
+    margin-right: 2rem;
+    @include display_between;
   }
 
   .fa-chevron-down {
-    padding-left: 0.8rem;
+    padding-left: 0.2rem;
   }
 
   button {
@@ -78,6 +80,14 @@ header {
     padding: 0.6rem 0.8rem;
     border-radius: 12px;
     text-transform: uppercase;
+  }
+
+  button :hover {
+    background-color: $shoking;
+  }
+
+  .fa-magnifying-glass {
+    padding-left: 1rem;
   }
 
 </style>
