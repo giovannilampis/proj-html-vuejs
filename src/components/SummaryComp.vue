@@ -19,10 +19,11 @@ export default {
     <section>
         <div class="container">
             <div class="row py-5">
+                <!-- FEATURED -->
                 <div class="col-3">
                     <p class="text-uppercase">featured</p>
                     <div v-for="summary_featured,index of subSummary.featured" :key="index" class="summary_element">
-                        <div class="d-flex">
+                        <div class="flex">
                             <div class="flex-1" style="flex: 1">
                                 <p>{{ summary_featured.title }}</p>
                                 <div v-if="summary_featured.stars != null" class="pb-2">
@@ -38,14 +39,17 @@ export default {
                                     </span>
                                 </div>
                             </div>
-                            <img style="width: 90px;" :src="'/images/' + summary_featured.img" alt="">
+                            <div class="image_container">
+                                <img :src="'/images/' + summary_featured.img" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- ON SALE -->
                 <div class="col-3">
                     <p class="text-uppercase">on sale</p>
                     <div v-for="summary_featured,index of subSummary.on_sale" :key="index" class="summary_element">
-                        <div class="d-flex">
+                        <div class="flex">
                             <div class="flex-1" style="flex: 1">
                                 <p>{{ summary_featured.title }}</p>
                                 <div v-if="summary_featured.stars != null" class="pb-2">
@@ -61,14 +65,18 @@ export default {
                                     </span>
                                 </div>
                             </div>
-                            <img style="width: 90px;" :src="'/images/' + summary_featured.img" alt="">
+                            <div class="image_container">
+                                <img :src="'/images/' + summary_featured.img" alt="">
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
+                <!-- TOP RATED -->
                 <div class="col-3">
                     <p class="text-uppercase">top rated</p>
                     <div v-for="summary_featured,index of subSummary.top_rated" :key="index" class="summary_element">
-                        <div class="d-flex">
+                        <div class="flex">
                             <div class="flex-1" style="flex: 1">
                                 <p>{{ summary_featured.title }}</p>
                                 <StarsComp/>
@@ -81,14 +89,17 @@ export default {
                                     </span>
                                 </div>
                             </div>
-                            <img style="width: 90px;" :src="'/images/' + summary_featured.img" alt="">
+                            <div class="image_container">
+                                <img :src="'/images/' + summary_featured.img" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- LATEST REVIEWS -->
                 <div class="col-3">
                     <p class="text-uppercase">latest reviews</p>
                     <div v-for="summary_featured,index of subSummary.latest_reviews" :key="index" class="summary_element">
-                        <div class="d-flex">
+                        <div class="flex">
                             <div class="flex-1" style="flex: 1">
         
                                 <p>{{ summary_featured.title }}</p>
@@ -98,7 +109,9 @@ export default {
                                 <p> by {{ summary_featured.author }}</p>
         
                             </div>
-                            <img style="width: 80px;" :src="'/images/' + summary_featured.img" alt="">
+                            <div class="image_container">
+                                <img :src="'/images/' + summary_featured.img" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -117,6 +130,15 @@ export default {
 section {
     height: 360px;
     margin-bottom: 10rem;
+}
+
+.flex {
+    @include display_between;
+}
+
+.image_container {
+    width: 70px;
+    padding-bottom: 1rem;
 }
 
 .summary_element {
