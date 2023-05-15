@@ -69,12 +69,13 @@ section {
 .cut_title::before, .cut_title::after{
     content: '';
     display: block;
-    width: 40%;
+    width: 35%;
     margin-top: auto;
     margin-bottom: auto;
     height: 2px;
     background: #3f3f3f2a;
 }
+
 
 .select-category:hover {
     background-color: $white;
