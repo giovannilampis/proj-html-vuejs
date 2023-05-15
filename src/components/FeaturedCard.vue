@@ -12,7 +12,7 @@
         <div>
             <img :src="'/images/' + product.image" alt="{{ product.name }}">
         </div>
-        <p>{{ product.title }}</p>
+        <p class="product_title fs-5 fw-bold">{{ product.title }}</p>
         <p>{{ product.description }}</p>
         <span v-if="product.sale_price != null">
             $<del>{{ product.price }}</del> ${{ product.sale_price }}
@@ -29,5 +29,18 @@
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
+.product_title {
+    color: $down_footer;
+    padding-top: 1rem;
+}
+
+span {
+    color: $havelock_blue;
+}
+
+img {
+    padding-top: 2rem;
+}
 
 </style>

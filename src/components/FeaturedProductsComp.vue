@@ -26,7 +26,7 @@ export default {
             <div>
                 <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
             </div> 
-            <div class="container-fluid row py-5">
+            <div class="container-fluid row py-4">
                 <FeaturedCard v-for="product,index of products[current_tab]" :key="index" 
                     :product="product">
                      
@@ -44,7 +44,8 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    padding-top: 12rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
     text-align: center;
 }
 
@@ -54,10 +55,17 @@ section {
     border: 1px solid lightgray;
     padding: 0.5rem 0.6rem;
     background-color: $gray_light;
+    color: $down_footer;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .select-category:hover {
     background-color: $white;
 }
+
+p {
+    padding-bottom: 2rem;
+}
+
 </style>
