@@ -5,21 +5,16 @@ export default {
     data() {
         return {
             bestSeller,
-            currentActive: 0,
+            start: 0,
+            end: 5
         }
     },
     methods: {
-        prev() {
-            this.currentActive--
-            if(this.currentActive < 0) {
-                this.currentActive = bestSeller.length - 1
-            }
-        },
-        next() {
-            this.currentActive++
-            if(this.currentActive > bestSeller.length - 1) {
-                this.currentActive = 0
-            }
+        nextButton(){
+            // i successi 5 elementi 
+            // incrementando indice di partenza e indice di fine
+            this.start ++;
+            this.end ++;
         }
     }
 }
@@ -34,23 +29,20 @@ export default {
 
             <div class="slider_container">
 
-                <div @click="prev" id="prev">
+                <div id="prev">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 
                 <div class="row pictures">
-                    <div class="col-2" v-for="img,index of bestSeller" :key="index">
-                        <img :src="'/images/' +img" :alt=" ` ìmmagine n. ${index}` "
-                        v-bind:class=" ( currentActive == index) ? 'active' : ' '">
+                    <div class="col-2" v-for="img,index of bestSeller.slice(start,end)" :key="index">
+                        <img :src="'/images/' +img" :alt="index">
                     </div>
                 </div>
 
-                <div @click="next" id="next">
+                <div id="next" @click="nextButton">
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
-
             </div>
-
         </div>
     </section>
 </template>
@@ -82,9 +74,7 @@ section {
     @include display_center;
 }
 
-.active {
-    opacity: 0;
-}
+
 .pictures {
     justify-content: center;
     align-items: center;
