@@ -22,18 +22,10 @@ export default {
                 this.start ++;
                 this.end ++;
             }
-        },
-        prevButton(){
-            // i successi 5 elementi 
-            // incrementando indice di partenza e indice di fine
-            if ( this.start == 0 ) {
-                this.start = this.bestSeller.length - 5;
-                this.end = this.bestSeller.length;
-            } else {
-                this.start --;
-                this.end --;
-            }
         }
+    },
+    mounted(){
+        this.nextButton()
     }
 }
 
