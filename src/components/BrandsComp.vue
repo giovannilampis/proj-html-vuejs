@@ -19,7 +19,7 @@ export default {
             <p class="text-center text-uppercase">
                 brand logos
             </p>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="flex">
                 <div v-for="(logo, index) in brandLogos" :key="index" class="logo_container">
                     <img :src="'/images/' + logo" alt="">
                 </div>
@@ -38,10 +38,22 @@ export default {
 section {
     background-color: $gray_light;
     height: 215px;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex {
+    @include display_between;
 }
 
 .logo_container {
-    width: 8%;
+    width: 12%;
 }
 
 </style>
