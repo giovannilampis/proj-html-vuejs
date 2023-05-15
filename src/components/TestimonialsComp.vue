@@ -6,8 +6,7 @@ export default {
     name: 'TestimonialsComp',
     data() {
         return {
-            testimonials,
-            current_tab: 'man'
+            testimonials
         }
     }
 }
