@@ -13,8 +13,13 @@ export default {
         nextButton(){
             // i successi 5 elementi 
             // incrementando indice di partenza e indice di fine
-            this.start ++;
-            this.end ++;
+            if( this.end == this.bestSeller.length ){
+                this.start = 0;
+                this.end =  5;
+            } else {
+                this.start ++;
+                this.end ++;
+            }
         },
         prevButton(){
             // i successi 5 elementi 
@@ -22,9 +27,10 @@ export default {
             if ( this.start == 0 ) {
                 this.start = this.bestSeller.length - 5;
                 this.end = this.bestSeller.length;
+            } else {
+                this.start --;
+                this.end --;
             }
-            this.start --;
-            this.end --;
         }
     }
 }
