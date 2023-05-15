@@ -5,7 +5,33 @@ export default {
     name: 'NewArrivalsComp',
     data() {
         return {
-            new_arrivals
+            new_arrivals,
+            start: 0,
+            end: 6
+        }
+    },
+    methods: {
+        nextButton(){
+            // i successi 5 elementi 
+            // incrementando indice di partenza e indice di fine
+            if( this.end == this.new_arrivals.length ){
+                this.start = 0;
+                this.end =  6;
+            } else {
+                this.start ++;
+                this.end ++;
+            }
+        },
+        prevButton(){
+            // i successi 5 elementi 
+            // incrementando indice di partenza e indice di fine
+            if ( this.start == 0 ) {
+                this.start = this.new_arrivals.length - 6;
+                this.end = this.new_arrivals.length;
+            } else {
+                this.start --;
+                this.end --;
+            }
         }
     }
 }
@@ -19,17 +45,17 @@ export default {
 
         <div class="slider_container">
 
-            <div id="prev">
+            <div id="prev" @click="prevButton">
                 <i class="fa-solid fa-chevron-left"></i>
             </div>
 
             <div class="row pictures">
-                <div class="col-2" v-for="img,index of new_arrivals" :key="index">
+                <div class="col-2" v-for="img,index of new_arrivals.slice(start,end)" :key="index">
                     <img :src="'/images/' +img" :alt="index">
                 </div>
             </div>
 
-            <div id="next">
+            <div id="next" @click="nextButton">
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
 
