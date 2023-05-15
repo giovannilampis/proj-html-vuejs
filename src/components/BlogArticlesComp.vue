@@ -22,10 +22,10 @@ export default {
                         <img :src="'/images/' + article.img" alt="article.title ">
                     </div>
                     <p class="fs-5 fw-bold">{{ article.title }}</p>
-                    <span>{{ article.date }}</span>
+                    <span class="date_bottom">{{ article.date }}</span>
                     
                     <span> | {{ article.comments }} Comments</span>
-                    <p>{{ article.description }}</p>
+                    <p class="pt-3">{{ article.description }}</p>
                 </div>
             </div>
         </div>
@@ -49,7 +49,13 @@ export default {
         border-bottom: 1px solid $edward;
         
     }
+
+    img {
+        padding-bottom: 1rem;
+    }
+
     p.fs-5 {
         color: $down_footer;
     }
+
 </style>
