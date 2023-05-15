@@ -15,6 +15,12 @@ export default {
             // incrementando indice di partenza e indice di fine
             this.start ++;
             this.end ++;
+        },
+        prevButton(){
+            // i successi 5 elementi 
+            // incrementando indice di partenza e indice di fine
+            this.start --;
+            this.end --;
         }
     }
 }
@@ -29,7 +35,7 @@ export default {
 
             <div class="slider_container">
 
-                <div id="prev">
+                <div id="prev" @click="prevButton">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 
