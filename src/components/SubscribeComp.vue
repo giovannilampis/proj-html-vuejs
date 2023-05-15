@@ -9,7 +9,7 @@ export default {
 <template>
     <section>
 
-        <div class="container">
+        <div>
 
             <div class="subscribe_container">
                 <a class="envelope_container"><i class="fa-solid fa-envelope"></i></a>
@@ -41,7 +41,8 @@ section {
 }
 
 .subscribe_container {
-    @include display_between;
+    @include display_center;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,12 +68,25 @@ section {
     transform: translate(-50%, -50%);
 }
 
+h4 {
+    font-size: 1.5rem;
+}
+
+input {
+    border: none;
+    width: 20%;
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 15px;
+
+}
+
 button {
     background-color: $havelock_blue;
     color: $white;
     border: none;
     font-size: 0.9rem;
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 2rem;
     border-radius: 15px;
     text-transform: uppercase;
 }
