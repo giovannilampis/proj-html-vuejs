@@ -21,7 +21,7 @@ export default {
     <section>
         <!-- <SectionTitle/> -->
         <div class="container">
-            <h2>Featured Products</h2>
+            <h2 class="text-capitalize text-center fw-bold">Featured Products</h2>
             <p>Must have products from our top sellers</p>
             <div>
                 <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>

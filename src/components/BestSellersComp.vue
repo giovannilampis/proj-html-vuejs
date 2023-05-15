@@ -14,7 +14,7 @@ export default {
 <template>
     <section>
         <div class="container">
-            <h2>Best Seller</h2>
+            <h2 class="text-capitalize text-center fw-bold">Best Seller</h2>
             <p>Must have products from our top sellers</p>
             <div class="row pictures">
                 <div class="col-2" v-for="img,index of bestSeller" :key="index">

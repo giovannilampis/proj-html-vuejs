@@ -14,7 +14,7 @@ export default {
 
 <template>
     <section>
-        <h2>New Arrivals</h2>
+        <h2 class="text-capitalize text-center fw-bold">New Arrivals</h2>
         <p>Brand new products from top designers</p>
         <div class="row pictures">
             <div class="col-2" v-for="img,index of new_arrivals" :key="index">
