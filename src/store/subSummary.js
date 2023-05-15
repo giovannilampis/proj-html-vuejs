@@ -7,19 +7,22 @@ export const subSummary = reactive({
         img: 'black_leather_jacket-120x156.jpg',
         title: 'Black Jacket',
         price: 125,
-        sale_price: null
+        sale_price: null,
+        stars: null
     },
     {
         img: 'black_elegant_leather_jacket-120x156.jpg',
         title: 'Black Leather Jacket',
         price: 2,
-        sale_price: 1
+        sale_price: 1,
+        stars: 5
     },
     {
         img: 'hipster_black_top-120x156.jpg',
         title: 'Hipster Balack Top',
         price: 57,
-        sale_price: null
+        sale_price: null,
+        stars: null
     }
    ],
 
@@ -28,18 +31,22 @@ export const subSummary = reactive({
         img: 'black_elegant_leather_jacket-120x156.jpg',
         title: 'Black Leather Jacket',
         price: 235,
-        sale_price: 200
+        sale_price: 200,
+        stars: 5
+
     }, {
         img: 'blue_leather_jacket-120x156.jpg',
         title: 'Blue Leather Jacket',
         price: 80,
-        sale_price: 60
+        sale_price: 60,
+        stars: null
     },
     {
         img: 'modern_leather_boots-120x156.jpg',
         title: 'Modern Leather Boots',
         price: 50,
-        sale_price: 30
+        sale_price: 30,
+        stars: null
     }
    ],
 

@@ -25,7 +25,10 @@ export default {
                         <div class="d-flex">
                             <div class="flex-1" style="flex: 1">
                                 <p>{{ summary_featured.title }}</p>
-                                <StarsComp/>
+                                <div v-if="summary_featured.stars != null" class="pb-2">
+                                    <StarsComp>
+                                    </StarsComp>
+                                </div>
                                 <div>
                                     <span v-if="summary_featured.sale_price != null">
                                         $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
@@ -45,7 +48,10 @@ export default {
                         <div class="d-flex">
                             <div class="flex-1" style="flex: 1">
                                 <p>{{ summary_featured.title }}</p>
-                                <StarsComp/>
+                                <div v-if="summary_featured.stars != null" class="pb-2">
+                                    <StarsComp>
+                                    </StarsComp>
+                                </div>
                                 <div>
                                     <span v-if="summary_featured.sale_price != null">
                                         $<del>{{ summary_featured.price }}</del> ${{ summary_featured.sale_price }}
