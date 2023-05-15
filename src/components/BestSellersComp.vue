@@ -19,6 +19,10 @@ export default {
         prevButton(){
             // i successi 5 elementi 
             // incrementando indice di partenza e indice di fine
+            if ( this.start == 0 ) {
+                this.start = this.bestSeller.length - 5;
+                this.end = this.bestSeller.length;
+            }
             this.start --;
             this.end --;
         }
@@ -32,7 +36,8 @@ export default {
         <div class="container">
             <h2 class="text-capitalize text-center fw-bold">Best Seller</h2>
             <p>Must have products from our top sellers</p>
-
+            {{ start }}
+            {{ end }}
             <div class="slider_container">
 
                 <div id="prev" @click="prevButton">
