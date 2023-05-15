@@ -17,7 +17,7 @@ export default {
 
     <section>
 
-        <div class="promo_container">
+        <div class="promo_container container">
 
             <div v-for="(offer, index) in offers" :key="index">
 
@@ -64,10 +64,11 @@ section {
 
 .promo_container {
     @include display_center;
+    gap: 30px;
 }
 
 .promo_box {
-    width: 50%;
+    // width: 50%;
     aspect-ratio: 3 / 2;
     position: relative;
 }

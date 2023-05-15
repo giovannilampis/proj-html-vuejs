@@ -42,8 +42,7 @@ export default {
         <div class="container">
             <h2 class="text-capitalize text-center fw-bold">Best Seller</h2>
             <p>Must have products from our top sellers</p>
-            {{ start }}
-            {{ end }}
+    
             <div class="slider_container">
 
                 <div id="prev" @click="prevButton">

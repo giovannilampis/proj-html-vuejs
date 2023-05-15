@@ -21,7 +21,11 @@ export default {
     <section>
         <!-- <SectionTitle/> -->
         <div class="container">
-            <h2 class="text-capitalize text-center fw-bold">Featured Products</h2>
+            <h2 class="text-capitalize text-center fw-bold cut_title d-flex">
+                <span>
+                    Featured Products
+                </span>
+            </h2>
             <p>Must have products from our top sellers</p>
             <div>
                 <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
@@ -47,7 +51,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    padding-top: 6rem;
+    padding-top: 22rem;
     padding-bottom: 4rem;
     text-align: center;
 }
@@ -61,6 +65,15 @@ section {
     color: $down_footer;
     font-weight: bold;
     cursor: pointer;
+}
+.cut_title::before, .cut_title::after{
+    content: '';
+    display: block;
+    width: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 2px;
+    background: #3f3f3f2a;
 }
 
 .select-category:hover {
