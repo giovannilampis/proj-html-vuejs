@@ -18,7 +18,7 @@ export default {
             <p>Must have products from our top sellers</p>
             <div class="row pictures">
                 <div class="col-2" v-for="img,index of bestSeller" :key="index">
-                    <img :src="'/images/' +img" alt="">
+                    <img :src="'/images/' +img" :alt="index">
                 </div>
             </div>
         </div>

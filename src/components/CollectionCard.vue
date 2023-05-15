@@ -16,7 +16,7 @@
     
     <div class="col-4" style=" height: 500px; position: relative;">
             <img style="object-fit: cover; position: absolute; z-index: -1; top: 0; left: 0; height: 100%; width: 100%;" 
-                :src="'/images/' + season.img" alt="{{ season.title }}">
+                :src="'/images/' + season.img" :alt="season.title">
 
             <div class="collection_text">
 

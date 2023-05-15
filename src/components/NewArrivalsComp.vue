@@ -18,7 +18,7 @@ export default {
         <p>Brand new products from top designers</p>
         <div class="row pictures">
             <div class="col-2" v-for="img,index of new_arrivals" :key="index">
-                <img :src="'/images/' +img" alt="">
+                <img :src="'/images/' +img" :alt="index">
             </div>
         </div>
     </section>

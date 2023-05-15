@@ -7,15 +7,7 @@ export default {
     data() {
         return {
             testimonials,
-            current_tab: testimonials[0]
-        }
-    },
-    methods: {
-        changeCharacter() {
-            this.current_tab = this.testimonials[1];
-        },
-        resetCharacter() {
-            this.current_tab = this.testimonials[0];
+            current_tab: 'man'
         }
     }
 }
@@ -25,7 +17,7 @@ export default {
 <template>
     <section>
         <div class="container">
-            <img :src="'/images/' + current_tab.img" alt="{{ current_tab.name }}">
+            <img :src="'/images/' + current_tab.img" :alt="current_tab.name">
     
             <p>{{ current_tab.quote }}</p>
     
@@ -34,8 +26,7 @@ export default {
             </div>
     
             <div>
-                <span @click="changeCharacter"><i class="fa-solid fa-circle"></i></span>
-                <span @click="resetCharacter"><i class="fa-solid fa-circle"></i></span>
+                <span @click="current_tab = index" v-for="(tab, index) of testimonials" :key="index" class="select-category"><i class="fa-solid fa-circle">{{ index }}</i></span>
             </div>
         </div>
 
@@ -51,8 +42,9 @@ export default {
 
 section {
     background-image: url('images/testimonials_home_1_bg.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    background-position: center;
     height: 412px;
 }
 

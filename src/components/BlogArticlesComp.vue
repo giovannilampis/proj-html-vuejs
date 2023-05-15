@@ -19,7 +19,7 @@ export default {
             <div class="row align-items-center justify-content-center">
                 <div v-for="article,index of blogArticles" :key="index" class="col-4">
                     <div class="image-container">
-                        <img :src="'/images/' + article.img" alt="article.title ">
+                        <img :src="'/images/' + article.img" :alt="article.title ">
                     </div>
                     <p class="fs-5 fw-bold">{{ article.title }}</p>
                     <span class="date_bottom">{{ article.date }}</span>

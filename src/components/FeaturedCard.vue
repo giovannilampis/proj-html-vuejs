@@ -10,7 +10,7 @@
 <template>
     <div class="col-3">
         <div>
-            <img :src="'/images/' + product.image" alt="{{ product.name }}">
+            <img :src="'/images/' + product.image" :alt="product.title">
         </div>
         <p class="product_title fs-5 fw-bold">{{ product.title }}</p>
         <p>{{ product.description }}</p>

@@ -40,7 +40,7 @@ export default {
                                 </div>
                             </div>
                             <div class="image_container">
-                                <img :src="'/images/' + summary_featured.img" alt="">
+                                <img :src="'/images/' + summary_featured.img" :alt="summary_featured.title">
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ export default {
                                 </div>
                             </div>
                             <div class="image_container">
-                                <img :src="'/images/' + summary_featured.img" alt="">
+                                <img :src="'/images/' + summary_featured.img" :alt="summary_featured.title">
                             </div>
                             
                         </div>
@@ -90,7 +90,7 @@ export default {
                                 </div>
                             </div>
                             <div class="image_container">
-                                <img :src="'/images/' + summary_featured.img" alt="">
+                                <img :src="'/images/' + summary_featured.img" :alt="summary_featured.title">
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@ export default {
         
                             </div>
                             <div class="image_container">
-                                <img :src="'/images/' + summary_featured.img" alt="">
+                                <img :src="'/images/' + summary_featured.img" :alt="summary_featured.title">
                             </div>
                         </div>
                     </div>
