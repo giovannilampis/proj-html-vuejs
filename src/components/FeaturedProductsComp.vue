@@ -19,7 +19,7 @@ export default {
 
 <template>
     <section>
-        <SectionTitle/>
+        <!-- <SectionTitle/> -->
         <div class="container">
             <h2>Featured Products</h2>
             <p>Must have products from our top sellers</p>
@@ -44,7 +44,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    padding-top: 16rem;
+    padding-top: 12rem;
     text-align: center;
 }
 
