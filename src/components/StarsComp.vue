@@ -23,4 +23,8 @@
 
 @use '../style/partials/mixins' as *;
 
+i {
+    color: $havelock_blue;
+}
+
 </style>

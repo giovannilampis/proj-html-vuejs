@@ -117,4 +117,8 @@ section {
     border-bottom: 1px solid $gray_light;
 }
 
+p.text-uppercase {
+    padding-bottom: 1rem;
+}
+
 </style>
