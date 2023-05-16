@@ -80,7 +80,7 @@ header {
     border: none;
     font-size: 0.9rem;
     padding: 0.6rem 0.8rem;
-    border-radius: 12px;
+    border-radius: 14px;
     text-transform: uppercase;
   }
 

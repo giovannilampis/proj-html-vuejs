@@ -84,7 +84,8 @@ section {
 
 .logo_container {
     width: 60%;
-    @include display_center
+    cursor: pointer;
+    @include display_center;
 }
 
 </style>

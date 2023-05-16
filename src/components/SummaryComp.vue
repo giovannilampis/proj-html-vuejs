@@ -25,7 +25,7 @@ export default {
                     <div v-for="summary_featured,index of subSummary.featured" :key="index" class="summary_element">
                         <div class="flex">
                             <div class="flex-1" style="flex: 1">
-                                <p>{{ summary_featured.title }}</p>
+                                <p class="item_title">{{ summary_featured.title }}</p>
                                 <div v-if="summary_featured.stars != null" class="pb-2">
                                     <StarsComp>
                                     </StarsComp>
@@ -51,7 +51,7 @@ export default {
                     <div v-for="summary_featured,index of subSummary.on_sale" :key="index" class="summary_element">
                         <div class="flex">
                             <div class="flex-1" style="flex: 1">
-                                <p>{{ summary_featured.title }}</p>
+                                <p class="item_title">{{ summary_featured.title }}</p>
                                 <div v-if="summary_featured.stars != null" class="pb-2">
                                     <StarsComp>
                                     </StarsComp>
@@ -78,7 +78,7 @@ export default {
                     <div v-for="summary_featured,index of subSummary.top_rated" :key="index" class="summary_element">
                         <div class="flex">
                             <div class="flex-1" style="flex: 1">
-                                <p>{{ summary_featured.title }}</p>
+                                <p class="item_title">{{ summary_featured.title }}</p>
                                 <StarsComp/>
                                 <div>
                                     <span v-if="summary_featured.sale_price != null">
@@ -102,7 +102,7 @@ export default {
                         <div class="flex">
                             <div class="flex-1" style="flex: 1">
         
-                                <p>{{ summary_featured.title }}</p>
+                                <p class="item_title">{{ summary_featured.title }}</p>
         
                                 <StarsComp/>
         
@@ -141,12 +141,21 @@ section {
     padding-bottom: 1rem;
 }
 
+.image_container:hover {
+    cursor: pointer;
+}
+
 .summary_element {
     border-bottom: 1px solid $gray_light;
 }
 
 p.text-uppercase {
     padding-bottom: 1rem;
+}
+
+.item_title:hover {
+    color: $havelock_blue;
+    cursor: pointer;
 }
 
 </style>

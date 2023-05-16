@@ -48,7 +48,7 @@ export default {
                 <div class="line line-right"></div>
         </div>
 
-        <p>Brand new products from top designers</p>
+        <p class="py-3">Brand new products from top designers</p>
 
         <div class="slider_container">
 
@@ -56,8 +56,8 @@ export default {
                 <i class="fa-solid fa-chevron-left"></i>
             </div>
 
-            <div class="row pictures">
-                <div class="col-2" v-for="img,index of new_arrivals.slice(start,end)" :key="index">
+            <div class="row">
+                <div class="image_container col-2" v-for="img,index of new_arrivals.slice(start,end)" :key="index">
                     <img :src="'/images/' +img" :alt="index">
                 </div>
             </div>
@@ -124,6 +124,10 @@ h2 {
 
 i.fa-solid {
     font-size: 0.6rem;
+}
+
+.image_container {
+    cursor: pointer;
 }
 
 </style>

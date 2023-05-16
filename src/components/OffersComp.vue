@@ -29,7 +29,7 @@ export default {
     
                         <p class="fs-3 fw-bold">{{ offer.offer }}</p>
     
-                        <p class="fw-light">{{ offer.description }}</p>
+                        <p class="offer_description">{{ offer.description }}</p>
     
                         <button class="offer_button">view more</button>
     
@@ -83,11 +83,16 @@ section {
     transform: translate(-50%, -50%);
     color: $white;
 }
+
+.offer_description {
+    font-weight: normal;
+}
 .offer_button {
    text-transform: uppercase;
    text-decoration: none;
    padding: 0.6rem 0.8rem;
-   border-radius: 10%;
+   margin-top: 1rem;
+   border-radius: 14px;
    color: $white;
    background-color: transparent;
    border: 1px solid $white;

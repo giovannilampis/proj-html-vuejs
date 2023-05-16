@@ -54,7 +54,7 @@ button {
     border: 1px solid $white;
     padding: 0.8rem 1.2rem;
     text-transform: uppercase;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .text-jumbo {

@@ -49,7 +49,7 @@ export default {
                         </div>
                     </div>
 
-                    <p class="fs-5 fw-bold">{{ article.title }}</p>
+                    <p class="title_article fs-5">{{ article.title }}</p>
                     <span class="date_bottom">{{ article.date }}</span>
                     
                     <span> | {{ article.comments }} Comments</span>
@@ -104,6 +104,15 @@ img {
     padding-bottom: 1rem;
 }
 
+.title_article {
+    font-weight: bold;
+}
+
+.title_article:hover {
+    cursor: pointer;
+    color: $havelock_blue;
+}
+
 p.fs-5 {
     color: $down_footer;
 }
@@ -112,6 +121,10 @@ p.fs-5 {
     width: 100%;
     overflow: hidden;
     position: relative;
+}
+
+.image_container:hover {
+    cursor: pointer;
 }
 
 .image_inner_container  {
