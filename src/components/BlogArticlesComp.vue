@@ -58,8 +58,9 @@ export default {
 
 section {
     width: 100%;
-    height: 650px;
+    height: 720px;
     padding-top: 5rem;
+    padding-bottom: 6rem;
     border-bottom: 1px solid $edward;
 }
 

@@ -66,7 +66,7 @@ section {
 .promo_container {
     @include display_center;
     @include absolute_center;
-    gap: 30px;
+    gap: 80px;
 }
 
 .promo_box {

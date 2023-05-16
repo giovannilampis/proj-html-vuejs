@@ -42,12 +42,14 @@ export default {
 <template>
     <section>
         <div class="container">
-            <p class="text-center text-uppercase">
+            <p class="title_section">
                 brand logos
             </p>
             <div class="row logos">
                 <div v-for="logo,index of brandLogos.slice(start,end)" :key="index" class="col-2">
-                    <img :src="'/images/' + logo" alt="index">
+                    <div class="logo_container">
+                        <img :src="'/images/' + logo" alt="index">
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,10 +72,19 @@ section {
 .container {
     @include absolute_center;
 }
+.title_section {
+    text-align: center;
+    text-transform: uppercase;
+}
 
 .logos {
     justify-content: center;
     align-items: center;
+}
+
+.logo_container {
+    width: 60%;
+    @include display_center
 }
 
 </style>
