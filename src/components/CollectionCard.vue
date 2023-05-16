@@ -20,7 +20,7 @@
 
             <div class="collection_text">
 
-                <p class="fs-3 fw-bold">{{ season.title }}</p>
+                <p class="title_card fs-3">{{ season.title }}</p>
     
                 <p class="text-uppercase fw-light">{{ season.description }}</p>
     
@@ -37,6 +37,11 @@
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
+.title_card {
+    white-space: nowrap;
+    font-weight: bold;
+}
 .collection_text {
     position: absolute;
     top: 65%;

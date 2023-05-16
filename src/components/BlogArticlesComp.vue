@@ -51,16 +51,17 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
-    .image-container {
-        width: 100%;
-    }
 
-    section {
-        width: 100%;
-        height: 650px;
-        padding-top: 5rem;
-        border-bottom: 1px solid $edward;
-    }
+.image-container {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: 650px;
+    padding-top: 5rem;
+    border-bottom: 1px solid $edward;
+}
 
 .title-container {
   display: flex;
