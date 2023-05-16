@@ -45,7 +45,7 @@ export default {
                 <div class="line line-left"></div>
                 <h2>new arrivals</h2>
                 <div class="line line-right"></div>
-            </div>
+        </div>
 
         <p>Brand new products from top designers</p>
 
@@ -75,6 +75,7 @@ export default {
 @use '../style/partials/variables' as *;
 
 @use '../style/partials/mixins' as *;
+
 
 section {
     width: 100%;

@@ -9,17 +9,19 @@
 
 <template>
     <div class="col-3">
-        <div>
-            <img :src="'/images/' + product.image" :alt="product.title">
+        <div class="card_container">
+            <div>
+                <img :src="'/images/' + product.image" :alt="product.title">
+            </div>
+            <p class="product_title fs-5 fw-bold">{{ product.title }}</p>
+            <p>{{ product.description }}</p>
+            <span v-if="product.sale_price != null">
+                $<del>{{ product.price }}</del> ${{ product.sale_price }}
+            </span>
+            <span v-else>
+                ${{ product.price }}
+            </span>
         </div>
-        <p class="product_title fs-5 fw-bold">{{ product.title }}</p>
-        <p>{{ product.description }}</p>
-        <span v-if="product.sale_price != null">
-            $<del>{{ product.price }}</del> ${{ product.sale_price }}
-        </span>
-        <span v-else>
-            ${{ product.price }}
-        </span>
     </div>
 
 </template>
@@ -30,6 +32,9 @@
 
 @use '../style/partials/mixins' as *;
 
+.card_container {
+    cursor: pointer;
+}
 .product_title {
     color: $down_footer;
     padding-top: 1rem;
