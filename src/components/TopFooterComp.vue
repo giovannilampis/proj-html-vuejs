@@ -126,4 +126,5 @@ section {
     margin-right: 0.3rem;
     padding: 0 0.3rem;
 }
+
 </style>
