@@ -26,11 +26,11 @@ export default {
             
             <div class="">
                 <img style="height: 40px; width: 40px;"  
-                :src="'/images/' + testimonials[current_testimonial].img" alt="">
+                :src="'/images/' + testimonials[current_testimonial].img" :alt="testimonials[current_testimonial].name">
                 {{ testimonials[current_testimonial].name }}
 
                 <div>
-                    <button v-for="_,index of testimonials" :key="index" @click="changeTestimonial(index)">O</button>
+                    <button class="circle_button" v-for="element,index of testimonials" :key="index" @click="changeTestimonial(index)"></button>
                 </div>
             </div>
     
@@ -60,6 +60,15 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.circle_button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $white;
+    // background-color: transparent;
 }
 
 </style>

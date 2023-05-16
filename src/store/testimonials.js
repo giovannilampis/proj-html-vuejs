@@ -12,17 +12,5 @@ export const testimonials = reactive([
         quote: 'Hammer bro jelectro buzzy beetle side-scrolling paragoomba',
         name: 'Princess Peach',
         position: 'HR'
-    },
-    {
-        img: 'woman_testimonial.png',
-        quote: 'Hammer bro jelectro buzzy beetle side-scrolling paragoomba',
-        name: 'Princess Peach',
-        position: 'HR'
-    },
-    {
-        img: 'woman_testimonial.png',
-        quote: 'Hammer bro jelectro buzzy beetle side-scrolling paragoomba',
-        name: 'Princess Peach',
-        position: 'HR'
     }
 ])
