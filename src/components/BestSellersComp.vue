@@ -78,7 +78,7 @@ export default {
 
 section {
     height: 410px;
-    margin-top: 12rem;
+    margin-top: 14rem;
     text-align: center;
 }
 
