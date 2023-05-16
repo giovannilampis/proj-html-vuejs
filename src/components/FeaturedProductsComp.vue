@@ -20,12 +20,14 @@ export default {
 <template>
     <section>
         <!-- <SectionTitle/> -->
-        <div class="container text-center">
-            <h2 class="text-capitalize fw-bold cut_title d-flex">
-                <span>
-                    Featured Products
-                </span>
-            </h2>
+        <div class="container">
+
+            <div class="title-container">
+                <div class="line line-left"></div>
+                <h2>featured products</h2>
+                <div class="line line-right"></div>
+            </div>
+          
             <p>Must have products from our top sellers</p>
             <div>
                 <span @click="current_tab = index" v-for="(tab, index) of products" :key="index" class="select-category">{{ index }}</span>
@@ -55,6 +57,26 @@ section {
     padding-bottom: 4rem;
     text-align: center;
 }
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+    @include title;
+}
+
+.line {
+    @include line;
+}
+
+.line-left {
+  margin-right: 0;
+}
+
+.line-right {
+  margin-left: 0;
+}
 
 .select-category {
     width: 6rem;
@@ -66,16 +88,6 @@ section {
     font-weight: bold;
     cursor: pointer;
 }
-.cut_title::before, .cut_title::after{
-    content: '';
-    display: block;
-    width: 35%;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 2px;
-    background: #3f3f3f2a;
-}
-
 
 .select-category:hover {
     background-color: $white;
