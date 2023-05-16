@@ -24,13 +24,17 @@ export default {
     <section>
         <div class="container relative h-100">
             
-            <div class="">
+            <div class="text-center">
+
                 <img style="height: 40px; width: 40px;"  
                 :src="'/images/' + testimonials[current_testimonial].img" :alt="testimonials[current_testimonial].name">
-                {{ testimonials[current_testimonial].name }}
+
+                <p>{{ testimonials[current_testimonial].quote }}</p>
+
+                <p>{{ testimonials[current_testimonial].name }}, {{ testimonials[current_testimonial].position }} </p>
 
                 <div>
-                    <button class="circle_button" v-for="element,index of testimonials" :key="index" 
+                    <button class="circle_button mx-2" v-for="element,index of testimonials" :key="index" 
                             @click="changeTestimonial(index)"
                             :class="{ 'active_button': index === current_testimonial }">
                     </button>
