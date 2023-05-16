@@ -20,8 +20,8 @@ export default {
 <template>
     <section>
         <!-- <SectionTitle/> -->
-        <div class="container">
-            <h2 class="text-capitalize text-center fw-bold cut_title d-flex">
+        <div class="container text-center">
+            <h2 class="text-capitalize fw-bold cut_title d-flex">
                 <span>
                     Featured Products
                 </span>
