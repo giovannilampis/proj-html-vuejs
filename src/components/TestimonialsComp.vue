@@ -32,7 +32,7 @@ export default {
                 <div>
                     <button class="circle_button" v-for="element,index of testimonials" :key="index" 
                             @click="changeTestimonial(index)"
-                            :class="{ 'active-button': index === current_testimonial }">
+                            :class="{ 'active_button': index === current_testimonial }">
                     </button>
                 </div>
             </div>
@@ -69,9 +69,12 @@ section {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    // background-color: transparent;
+    background-color: transparent;
     border: 2px solid $white;
-    // background-color: transparent;
+}
+
+.active_button {
+    background-color: $white;
 }
 
 </style>
