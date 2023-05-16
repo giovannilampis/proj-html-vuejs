@@ -65,11 +65,8 @@ section {
 
 .promo_container {
     @include display_center;
+    @include absolute_center;
     gap: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .promo_box {
@@ -94,8 +91,8 @@ section {
    color: $white;
    background-color: transparent;
    border: 1px solid $white;
-    font-size: 0.7rem;
-    font-weight: bold;
+   font-size: 0.7rem;
+   font-weight: bold;
 }
 
 </style>

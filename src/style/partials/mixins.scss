@@ -23,5 +23,12 @@
     height: 1px;
     background-color: #a0a5a5;
     margin: 0 1rem;
-  }
+}
+
+@mixin absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
