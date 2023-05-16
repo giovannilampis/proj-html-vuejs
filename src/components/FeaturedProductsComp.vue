@@ -53,7 +53,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    padding-top: 22rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
     text-align: center;
 }

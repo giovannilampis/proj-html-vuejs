@@ -54,17 +54,22 @@ export default {
 
 section {
     width: 100%;
-    height: 412px;
+    height: 500px;
     background-image: url(/images/bkgd_confetti-compressor.jpg);
     background-repeat: repeat;
     background-size: cover;
     background-position: center;
     min-height: 20rem;
+    position: relative
 }
 
 .promo_container {
     @include display_center;
     gap: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .promo_box {

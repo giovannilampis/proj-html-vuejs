@@ -13,6 +13,7 @@ export default {
 
 <template>
     <section>
+
         <div class="container">
             
             <div class="title-container">
@@ -24,6 +25,7 @@ export default {
             <p class="text-center pb-5">The latest Classic Shop news</p>
 
             <div class="row align-items-center justify-content-center">
+
                 <div v-for="article,index of blogArticles" :key="index" class="col-4">
                     <div class="image-container">
                         <img :src="'/images/' + article.img" :alt="article.title ">
@@ -33,9 +35,13 @@ export default {
                     
                     <span> | {{ article.comments }} Comments</span>
                     <p class="pt-3">{{ article.description }}</p>
+                    
                 </div>
+
             </div>
+
         </div>
+
     </section>
 </template>
 
