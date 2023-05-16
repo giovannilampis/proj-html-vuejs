@@ -27,7 +27,7 @@ export default {
             <div class="row align-items-center justify-content-center">
 
                 <div v-for="article,index of blogArticles" :key="index" class="col-4">
-                    <div class="image-container">
+                    <div class="image_container">
                         <img :src="'/images/' + article.img" :alt="article.title ">
                     </div>
                     <p class="fs-5 fw-bold">{{ article.title }}</p>
@@ -52,8 +52,10 @@ export default {
 
 @use '../style/partials/mixins' as *;
 
-.image-container {
+.image_container {
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 section {
