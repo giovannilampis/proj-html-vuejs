@@ -5,7 +5,7 @@ export const testimonials = reactive([
         img: 'man_testimonial.png',
         quote: 'Swim sprite PAL! Wendy koopa fireball whistle Desert Land',
         name: 'Darìo Pineda',
-        position: 'CEO'
+        position: 'Theme Fusion'
     },
     {
         img: 'woman_testimonial.png',
