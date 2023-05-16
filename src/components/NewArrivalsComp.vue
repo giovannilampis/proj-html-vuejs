@@ -39,6 +39,7 @@ export default {
 </script>
 
 <template>
+
     <section>
         
         <div class="title-container">
@@ -66,7 +67,9 @@ export default {
             </div>
 
         </div>
+
     </section>
+
 </template>
 
 
@@ -79,9 +82,9 @@ export default {
 
 section {
     width: 100%;
-    height: 500px;
+    height: 460px;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .title-container {
@@ -117,6 +120,10 @@ h2 {
     aspect-ratio: 1 / 2;
     cursor: pointer;
     @include display_center;
+}
+
+i.fa-solid {
+    font-size: 0.6rem;
 }
 
 </style>

@@ -57,7 +57,7 @@
     color: $white;
     padding: 0.7rem 0.9rem;
     border: 1px solid $white;
-    border-radius: 10px;
+    border-radius: 14px;
     font-size: 0.65rem;
     font-weight: bold;
 }

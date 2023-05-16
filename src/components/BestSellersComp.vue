@@ -113,6 +113,10 @@ h2 {
   margin-left: 0;
 }
 
+i.fa-solid {
+    font-size: 0.6rem;
+}
+
 #prev,
 #next {
     background-color: $edward;
