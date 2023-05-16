@@ -9,7 +9,7 @@ export default {
 <template>
     <section>
         <div class="container">
-            <p class="pt-2">Copyright 2012 - 2020 | Avada Theme by Theme Fusion | All Rights Reserved | Powered by WordPress</p>
+            <p class="pt-4">Copyright 2012 - 2020 | Avada Theme by Theme Fusion | All Rights Reserved | Powered by WordPress</p>
             <div class="image_container">
                 <img src="../../public/images/payment_cards_footer.png" alt="">
             </div>
@@ -26,7 +26,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
-    height: 86px;
+    height: 120px;
     background-color: $down_footer;
     text-align: center;
     font-size: 0.8rem;
@@ -36,7 +36,7 @@ section {
 .image_container {
     width: 16.6%;
     height: 35%;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 </style>

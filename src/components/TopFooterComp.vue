@@ -44,7 +44,7 @@ export default {
                     <p class="text-uppercase">top rated products</p>
                     <div class="row" v-for="top_rated,index of topRatedProducts" :key="index">
                         <div class="col-8">
-                            <p class="m-0"> {{ top_rated.name }}</p>
+                            <p class="rated_item_name m-0"> {{ top_rated.name }}</p>
                             <StarsComp/>
                             <div>
                                 <span v-if="top_rated.sale_price != null">
@@ -69,7 +69,7 @@ export default {
                     <div v-for="recent_post,index of recentPost" :key="index">
                         <div class="d-flex">
                             <i>></i>
-                            <p class="ms-2">{{ recent_post }}</p>
+                            <p class="post_title ms-2">{{ recent_post }}</p>
                         </div>
                     </div>
                 </div>
@@ -126,5 +126,18 @@ section {
     margin-right: 0.3rem;
     padding: 0 0.3rem;
 }
+
+span.tag-style:hover {
+    background-color: $bright_turquoise;
+    color: $white;
+    border: none;
+    cursor: pointer;
+}
+
+.rated_item_name:hover, .post_title:hover {
+    color: $bright_turquoise;
+    cursor: pointer;
+}
+
 
 </style>
