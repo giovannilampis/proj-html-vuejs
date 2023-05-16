@@ -27,7 +27,7 @@ export default {
   
         </ul>
   
-        <a class="button_header">shop now!</a>
+        <a class="button_header styled-button hover-button"></a>
   
         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
   
@@ -73,8 +73,10 @@ header {
   }
 
   .button_header {
+    width: 10rem;
     background-color: $havelock_blue;
     color: $white;
+    text-align: center;
     border: none;
     font-size: 0.9rem;
     padding: 0.6rem 0.8rem;
@@ -82,9 +84,17 @@ header {
     text-transform: uppercase;
   }
 
+  .styled-button::before {
+    content: "shop now!";
+  }
+
   .button_header:hover {
     background-color: $shocking;
   }
+
+  .hover-button:hover::before {
+  content: "get avada now!";
+}
 
   .fa-magnifying-glass {
     padding-left: 1rem;
