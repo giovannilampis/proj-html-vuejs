@@ -71,6 +71,7 @@ export default {
 @use '../style/partials/mixins' as *;
 
 section {
+    color: $white;
     background-image: url('images/testimonials_home_1_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
