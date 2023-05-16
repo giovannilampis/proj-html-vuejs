@@ -28,7 +28,7 @@ export default {
 
                 <div v-for="article,index of blogArticles" :key="index" class="col-4">
                     <div class="image_container">
-                        <img :src="'/images/' + article.img" :alt="article.title ">
+                        <img :src="'/images/' + article.img" :alt="article.title" id="zoom_image">
                     </div>
                     <p class="fs-5 fw-bold">{{ article.title }}</p>
                     <span class="date_bottom">{{ article.date }}</span>
@@ -56,6 +56,14 @@ export default {
     width: 100%;
     overflow: hidden;
     position: relative;
+}
+
+#zoom_image {
+    transition: transform 0.3s ease;
+}
+
+.zoomed {
+  transform: scale(1.15);
 }
 
 section {
