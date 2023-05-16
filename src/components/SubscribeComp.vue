@@ -42,11 +42,8 @@ section {
 
 .subscribe_container {
     @include display_center;
+    @include absolute_center;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: $white;
 }
 
