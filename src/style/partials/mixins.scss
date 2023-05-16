@@ -9,3 +9,19 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin title {
+    white-space: nowrap;
+    padding: 0 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+}
+
+@mixin line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #a0a5a5;
+    margin: 0 1rem;
+  }
+

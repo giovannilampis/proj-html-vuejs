@@ -43,7 +43,7 @@ export default {
 
             <div class="title-container">
                 <div class="line line-left"></div>
-                <h2 class="title text-capitalize text-center fw-bold">Best Seller</h2>
+                <h2>Best Seller</h2>
                 <div class="line line-right"></div>
             </div>
 
@@ -91,11 +91,12 @@ section {
   align-items: center;
 }
 
+h2 {
+    @include title;
+}
+
 .line {
-  flex-grow: 1;
-  height: 2px;
-  background-color: red;
-  margin: 0 1rem;
+    @include line;
 }
 
 .line-left {
@@ -104,11 +105,6 @@ section {
 
 .line-right {
   margin-left: 0;
-}
-
-.title {
-  white-space: nowrap;
-  padding: 0 1rem;
 }
 
 #prev,
@@ -120,7 +116,6 @@ section {
     cursor: pointer;
     @include display_center;
 }
-
 
 .pictures {
     justify-content: center;
