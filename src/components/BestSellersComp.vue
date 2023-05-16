@@ -57,7 +57,9 @@ export default {
                 
                 <div class="row pictures">
                     <div class="col-2" v-for="img,index of bestSeller.slice(start,end)" :key="index">
-                        <img :src="'/images/' + img" :alt="index">
+                        <div class="image_container">
+                            <img :src="'/images/' + img" :alt="`image n. ${index}`">
+                        </div>
                     </div>
                 </div>
 
@@ -84,6 +86,10 @@ section {
 
 .slider_container {
     @include display_between;
+}
+
+.image_container {
+    cursor: pointer;
 }
 
 .title-container {
