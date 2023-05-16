@@ -118,5 +118,4 @@ h2 {
     @include display_center;
 }
 
-
 </style>

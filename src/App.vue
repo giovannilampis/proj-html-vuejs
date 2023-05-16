@@ -1,7 +1,6 @@
 <script >
 
 import TopHeaderComp from '../src/components/TopHeaderComp.vue';
-import SectionTitle from '../src/components/SectionTitle.vue';
 import BottomHeaderComp from '../src/components/BottomHeaderComp.vue';
 import JumboComp from '../src/components/JumboComp.vue';
 import FeaturedProductsComp from '../src/components/FeaturedProductsComp.vue';
@@ -24,7 +23,6 @@ export default{
       BottomHeaderComp,
       JumboComp,
       FeaturedProductsComp,
-      SectionTitle,
       CollectionsComp,
       BestSellersComp,
       OffersComp,
