@@ -4,12 +4,21 @@ export default {
     name: 'BlogArticlesComp',
     data() {
         return {
-            blogArticles
+            blogArticles,
+            zoomedIndexes: []
         }
     },
     methods: {
-        zoom_image() {
-            this.blogArticles[index].img.classList.add('zoomed')
+        zoom_image_in(index) {
+            if (!this.zoomedIndexes.includes(index)) {
+                this.zoomedIndexes.push(index);
+      }
+        },
+        zoom_image_out(index) {
+            const zoomIndex = this.zoomedIndexes.indexOf(index);
+            if (zoomIndex !== -1) {
+                this.zoomedIndexes.splice(zoomIndex, 1);
+            }
         }
     },
 }
@@ -31,9 +40,10 @@ export default {
 
             <div class="row align-items-center justify-content-center">
 
-                <div v-for="article,index of blogArticles" :key="index" class="col-4" @mouseover="zoom_image">
+                <div v-for="article,index of blogArticles" :key="index" class="col-4">
 
-                    <div class="image_container">
+                    <div class="image_container" :class="{ 'zoomed': zoomedIndexes.includes(index) }"
+                    @mouseover="zoom_image_in(index)" @mouseleave="zoom_image_out(index)">
                         <img :src="'/images/' + article.img" :alt="article.title">
                     </div>
 
