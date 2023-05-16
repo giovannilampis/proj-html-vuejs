@@ -27,7 +27,7 @@ export default {
   
         </ul>
   
-        <button>shop now!</button>
+        <a class="button_header">shop now!</a>
   
         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
   
@@ -72,7 +72,7 @@ header {
     padding-left: 0.2rem;
   }
 
-  button {
+  .button_header {
     background-color: $havelock_blue;
     color: $white;
     border: none;
@@ -82,8 +82,8 @@ header {
     text-transform: uppercase;
   }
 
-  button :hover {
-    background-color: $shoking;
+  .button_header:hover {
+    background-color: $shocking;
   }
 
   .fa-magnifying-glass {

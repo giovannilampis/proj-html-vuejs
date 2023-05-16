@@ -28,7 +28,7 @@ export default {
         autoScroll() {
             setInterval( () => {
                 this.nextButton()
-            }, 2000 )
+            }, 1000 )
         }
     },
 
