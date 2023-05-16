@@ -13,7 +13,23 @@ export default {
     methods: {
         changeTestimonial(index){
             this.current_testimonial = index;
+        },
+        changePerson(){
+            if(this.current_testimonial == 1) {
+                this.current_testimonial = 0
+            } else if(this.current_testimonial == 0){
+                this.current_testimonial = 1
+            } 
+        },
+        autoScroll(){
+            setInterval( () => {
+                this.changePerson()
+            }, 1000 )
         }
+
+    },
+    mounted(){
+        this.autoScroll()
     }
 }
 
