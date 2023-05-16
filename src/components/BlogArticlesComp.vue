@@ -43,8 +43,10 @@ export default {
                 <div v-for="article,index of blogArticles" :key="index" class="col-4">
 
                     <div class="image_container" :class="{ 'zoomed': zoomedIndexes.includes(index) }"
-                    @mouseover="zoom_image_in(index)" @mouseleave="zoom_image_out(index)">
-                        <img :src="'/images/' + article.img" :alt="article.title">
+                        @mouseover="zoom_image_in(index)" @mouseleave="zoom_image_out(index)">
+                        <div class="image_inner_container">
+                            <img :src="'/images/' + article.img" :alt="article.title">
+                        </div>
                     </div>
 
                     <p class="fs-5 fw-bold">{{ article.title }}</p>
@@ -69,19 +71,6 @@ export default {
 
 @use '../style/partials/mixins' as *;
 
-.image_container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-#zoom_image {
-    transition: transform 0.3s ease;
-}
-
-.zoomed {
-  transform: scale(1.15);
-}
 
 section {
     width: 100%;
@@ -90,7 +79,6 @@ section {
     padding-bottom: 6rem;
     border-bottom: 1px solid $edward;
 }
-
 .title-container {
   display: flex;
   align-items: center;
@@ -112,12 +100,31 @@ h2 {
   margin-left: 0;
 }
 
-    img {
-        padding-bottom: 1rem;
-    }
+img {
+    padding-bottom: 1rem;
+}
 
-    p.fs-5 {
-        color: $down_footer;
-    }
+p.fs-5 {
+    color: $down_footer;
+}
+
+.image_container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image_inner_container  {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.zoomed .image_inner_container {
+  transform: scale(1.15);
+}
 
 </style>
