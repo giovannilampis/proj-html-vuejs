@@ -34,6 +34,7 @@
 
 .card_container {
     cursor: pointer;
+    text-align: left;
 }
 .product_title {
     color: $down_footer;
