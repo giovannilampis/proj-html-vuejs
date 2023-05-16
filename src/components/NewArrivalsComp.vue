@@ -40,7 +40,13 @@ export default {
 
 <template>
     <section>
-        <h2 class="text-capitalize text-center fw-bold">New Arrivals</h2>
+        
+        <div class="title-container">
+                <div class="line line-left"></div>
+                <h2>new arrivals</h2>
+                <div class="line line-right"></div>
+            </div>
+
         <p>Brand new products from top designers</p>
 
         <div class="slider_container">
@@ -75,6 +81,27 @@ section {
     height: 500px;
     text-align: center;
     margin-top: 2rem;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+    @include title;
+}
+
+.line {
+    @include line;
+}
+
+.line-left {
+  margin-right: 0;
+}
+
+.line-right {
+  margin-left: 0;
 }
 
 .slider_container {

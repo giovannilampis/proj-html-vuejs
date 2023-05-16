@@ -43,7 +43,7 @@ export default {
 
             <div class="title-container">
                 <div class="line line-left"></div>
-                <h2>Best Seller</h2>
+                <h2>best seller</h2>
                 <div class="line line-right"></div>
             </div>
 
