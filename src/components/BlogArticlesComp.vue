@@ -6,7 +6,12 @@ export default {
         return {
             blogArticles
         }
-    }
+    },
+    methods: {
+        zoom_image() {
+            this.blogArticles[index].img.classList.add('zoomed')
+        }
+    },
 }
 
 </script>
@@ -26,10 +31,12 @@ export default {
 
             <div class="row align-items-center justify-content-center">
 
-                <div v-for="article,index of blogArticles" :key="index" class="col-4">
+                <div v-for="article,index of blogArticles" :key="index" class="col-4" @mouseover="zoom_image">
+
                     <div class="image_container">
-                        <img :src="'/images/' + article.img" :alt="article.title" id="zoom_image">
+                        <img :src="'/images/' + article.img" :alt="article.title">
                     </div>
+
                     <p class="fs-5 fw-bold">{{ article.title }}</p>
                     <span class="date_bottom">{{ article.date }}</span>
                     
