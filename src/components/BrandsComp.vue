@@ -11,22 +11,30 @@ export default {
             end: 5
         }
     },
+   
     methods: {
+     
         nextButton(){
-            // i successi 5 elementi 
+            // i successivi 5 elementi 
             // incrementando indice di partenza e indice di fine
-            if( this.end == this.bestSeller.length ){
+            if( this.end == this.brandLogos.length ){
                 this.start = 0;
                 this.end =  5;
             } else {
                 this.start ++;
                 this.end ++;
             }
+        },
+        autoScroll() {
+            setInterval( () => {
+                this.nextButton()
+            }, 2000 )
         }
     },
+
     mounted(){
-        this.nextButton()
-    }
+        this.autoScroll()
+    },
 }
 
 </script>
@@ -37,9 +45,9 @@ export default {
             <p class="text-center text-uppercase">
                 brand logos
             </p>
-            <div class="flex">
-                <div v-for="(logo, index) in brandLogos.slice(start,end)" :key="index" class="logo_container">
-                    <img :src="'/images/' + logo" alt="">
+            <div class="row logos">
+                <div v-for="logo,index of brandLogos.slice(start,end)" :key="index" class="col-2">
+                    <img :src="'/images/' + logo" alt="index">
                 </div>
             </div>
         </div>
@@ -66,12 +74,9 @@ section {
     transform: translate(-50%, -50%);
 }
 
-.flex {
-    @include display_between;
-}
-
-.logo_container {
-    width: 12%;
+.logos {
+    justify-content: center;
+    align-items: center;
 }
 
 </style>

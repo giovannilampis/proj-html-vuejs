@@ -11,7 +11,7 @@ export default {
     },
     methods: {
         nextButton(){
-            // i successi 5 elementi 
+            // i successivi 5 elementi 
             // incrementando indice di partenza e indice di fine
             if( this.end == this.bestSeller.length ){
                 this.start = 0;
@@ -22,7 +22,7 @@ export default {
             }
         },
         prevButton(){
-            // i successi 5 elementi 
+            // i successivi 5 elementi 
             // incrementando indice di partenza e indice di fine
             if ( this.start == 0 ) {
                 this.start = this.bestSeller.length - 5;
@@ -51,7 +51,7 @@ export default {
                 
                 <div class="row pictures">
                     <div class="col-2" v-for="img,index of bestSeller.slice(start,end)" :key="index">
-                        <img :src="'/images/' +img" :alt="index">
+                        <img :src="'/images/' + img" :alt="index">
                     </div>
                 </div>
 
