@@ -24,7 +24,7 @@ export default {
         autoScroll(){
             setInterval( () => {
                 this.changePerson()
-            }, 2000 )
+            }, 3000 )
         }
 
     },

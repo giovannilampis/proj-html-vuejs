@@ -57,6 +57,10 @@ section {
     cursor: pointer;
 }
 
+.envelope_container:hover {
+    background-color: $white;
+}
+
 .fa-envelope {
     font-size: 1.3rem;
     position: absolute;
@@ -82,10 +86,14 @@ button {
     background-color: $havelock_blue;
     color: $white;
     border: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 0.4rem 2rem;
     border-radius: 15px;
     text-transform: uppercase;
+}
+
+button:hover {
+    background-color: $bright_turquoise;
 }
 
 </style>

@@ -135,7 +135,7 @@ span.tag-style:hover {
 }
 
 .rated_item_name:hover, .post_title:hover {
-    color: $bright_turquoise;
+    color: $havelock_blue;
     cursor: pointer;
 }
 
