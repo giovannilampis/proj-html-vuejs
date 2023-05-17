@@ -87,7 +87,8 @@ section {
     width: 100%;
     height: 460px;
     text-align: center;
-    margin: 6rem 0 9rem 0;
+    margin: 6rem 0 6rem 0;
+    padding-bottom: 22rem;
 }
 
 .title-container {

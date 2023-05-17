@@ -42,6 +42,7 @@ h3 {
     height: 482px;
     background-image: url('images/home1_slide_one_bg.jpg');
     position: relative;
+    margin-bottom: 5rem
 }
 
 .button-container {
