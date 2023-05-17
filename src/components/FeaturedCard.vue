@@ -10,8 +10,9 @@
 <template>
     <div class="col-3">
         <div class="card_container">
-            <div>
+            <div class="image_container">
                 <img :src="'/images/' + product.image" :alt="product.title">
+                <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <p class="product_title fs-5 fw-bold">{{ product.title }}</p>
             <p>{{ product.description }}</p>
@@ -39,6 +40,31 @@
 .product_title {
     color: $down_footer;
     padding-top: 1rem;
+}
+
+.image_container {
+    position: relative;
+}
+
+.image_container > i {
+    @include absolute_center;
+    font-size: 5rem;
+    color: $white;
+    display: none;
+}
+
+.col-3:hover .image_container > i{
+    display: block;
+}
+
+.col-3:hover .image_container::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(226, 128, 177, 0.5);
 }
 
 span {

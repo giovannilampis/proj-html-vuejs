@@ -59,6 +59,7 @@ export default {
                     <div class="col-2" v-for="img,index of bestSeller.slice(start,end)" :key="index">
                         <div class="image_container">
                             <img :src="'/images/' + img" :alt="`image n. ${index}`">
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </div>
                     </div>
                 </div>
@@ -97,6 +98,31 @@ section {
   align-items: center;
 }
 
+.image_container {
+    position: relative;
+}
+
+.fa-cart-shopping {
+    @include absolute_center;
+    font-size: 3rem;
+    color: $white;
+    display: none;
+}
+
+.col-2:hover .image_container > i{
+    display: block;
+}
+
+.col-2:hover .image_container::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(226, 128, 177, 0.5);
+}
+
 h2 {
     @include title;
 }
@@ -113,7 +139,7 @@ h2 {
   margin-left: 0;
 }
 
-i.fa-solid {
+i.fa-chevron-left, i.fa-chevron-right {
     font-size: 0.6rem;
 }
 

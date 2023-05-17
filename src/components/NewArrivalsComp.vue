@@ -57,8 +57,11 @@ export default {
             </div>
 
             <div class="row">
-                <div class="image_container col-2" v-for="img,index of new_arrivals.slice(start,end)" :key="index">
-                    <img :src="'/images/' +img" :alt="index">
+                <div class="col-2" v-for="img,index of new_arrivals.slice(start,end)" :key="index">
+                    <div class="image_container">
+                        <img :src="'/images/' +img" :alt="index">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
                 </div>
             </div>
 
@@ -122,12 +125,34 @@ h2 {
     @include display_center;
 }
 
-i.fa-solid {
+i.fa-chevron-left, i.fa-chevron-right  {
     font-size: 0.6rem;
 }
 
 .image_container {
     cursor: pointer;
+    position: relative;
+}
+
+.fa-cart-shopping {
+    @include absolute_center;
+    font-size: 4rem;
+    color: $white;
+    display: none;
+}
+
+.col-2:hover .image_container > i{
+    display: block;
+}
+
+.col-2:hover .image_container::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(226, 128, 177, 0.5);
 }
 
 </style>
