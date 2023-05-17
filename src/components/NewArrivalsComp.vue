@@ -130,7 +130,6 @@ i.fa-chevron-left, i.fa-chevron-right  {
 }
 
 .image_container {
-    cursor: pointer;
     position: relative;
 }
 
@@ -138,6 +137,7 @@ i.fa-chevron-left, i.fa-chevron-right  {
     @include absolute_center;
     font-size: 4rem;
     color: $white;
+    cursor: pointer;
     display: none;
 }
 

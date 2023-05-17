@@ -89,10 +89,6 @@ section {
     @include display_between;
 }
 
-.image_container {
-    cursor: pointer;
-}
-
 .title-container {
   display: flex;
   align-items: center;
@@ -106,6 +102,7 @@ section {
     @include absolute_center;
     font-size: 3rem;
     color: $white;
+    cursor: pointer;
     display: none;
 }
 

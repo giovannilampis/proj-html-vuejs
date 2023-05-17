@@ -34,7 +34,6 @@
 @use '../style/partials/mixins' as *;
 
 .card_container {
-    cursor: pointer;
     text-align: left;
 }
 .product_title {
@@ -50,6 +49,7 @@
     @include absolute_center;
     font-size: 5rem;
     color: $white;
+    cursor: pointer;
     display: none;
 }
 
