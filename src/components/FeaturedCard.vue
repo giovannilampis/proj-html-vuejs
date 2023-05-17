@@ -40,6 +40,9 @@
     color: $down_footer;
     padding-top: 1rem;
 }
+.product_title:hover {
+    color: havelock_blue;
+}
 
 .image_container {
     position: relative;
