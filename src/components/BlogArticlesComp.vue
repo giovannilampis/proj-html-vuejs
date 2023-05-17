@@ -40,7 +40,7 @@ export default {
 
             <div class="row align-items-center justify-content-center">
 
-                <div v-for="article,index of blogArticles" :key="index" class="col-4">
+                <div v-for="article,index of blogArticles" :key="index" class="card_blog col-4">
 
                     <div class="image_container" :class="{ 'zoomed': zoomedIndexes.includes(index) }"
                         @mouseover="zoom_image_in(index)" @mouseleave="zoom_image_out(index)">
@@ -117,10 +117,16 @@ p.fs-5 {
     color: $down_footer;
 }
 
+.card_blog {
+    transform: translate(450ms ease);
+}
+
 .image_container {
-    width: 100%;
+    width: 400px;
+    height: 250px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .image_container:hover {
@@ -134,10 +140,11 @@ p.fs-5 {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: all 600ms ease;
 }
 
 .zoomed .image_inner_container {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 </style>
