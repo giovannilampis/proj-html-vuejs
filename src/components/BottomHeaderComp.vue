@@ -82,6 +82,7 @@ header {
     padding: 0.6rem 0.8rem;
     border-radius: 14px;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   .styled-button::before {

@@ -38,10 +38,11 @@
 }
 .product_title {
     color: $down_footer;
+    cursor: pointer;
     padding-top: 1rem;
 }
 .product_title:hover {
-    color: havelock_blue;
+    color: $havelock_blue;
 }
 
 .image_container {
