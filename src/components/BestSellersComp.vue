@@ -150,6 +150,10 @@ i.fa-chevron-left, i.fa-chevron-right {
     @include display_center;
 }
 
+#prev:hover, #next:hover {
+    background-color: $fedora;
+}
+
 .pictures {
     justify-content: center;
     align-items: center;

@@ -87,7 +87,7 @@ section {
     width: 100%;
     height: 460px;
     text-align: center;
-    margin-top: 5rem;
+    margin: 6rem 0 9rem 0;
 }
 
 .title-container {
@@ -123,6 +123,10 @@ h2 {
     aspect-ratio: 1 / 2;
     cursor: pointer;
     @include display_center;
+}
+
+#prev:hover, #next:hover {
+    background-color: $fedora;
 }
 
 i.fa-chevron-left, i.fa-chevron-right  {
